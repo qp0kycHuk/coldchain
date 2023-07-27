@@ -1,0 +1,169 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+<section class="relative page-top">
+  <div class="absolute inset-0 page-top-background">
+    <img src="img/page-top.jpg" alt="" class="object-cover absolute-image">
+  </div>
+  <div class="page-top-content">
+    <div class="title">регистрация</div>
+  </div>
+</section>
+
+<section class="registration section-padding">
+  <form>
+
+    <div class="text-1.5xl font-alt font-semibold mb-6">Личные данные</div>
+    <div class="grid sm:grid-cols-2 gap-x-8 gap-y-6">
+      <label class="form-field">
+        <div class="mb-2 text-sm font-medium"><span class="text-red">*</span>Имя</div>
+        <div class="form-input-cover">
+          <input type="text" class="rounded-lg form-input">
+        </div>
+      </label>
+      <label class="form-field">
+        <div class="mb-2 text-sm font-medium"><span class="text-red">*</span>Имя на английском языке</div>
+        <div class="form-input-cover">
+          <input type="text" class="rounded-lg form-input">
+        </div>
+      </label>
+      <label class="form-field">
+        <div class="mb-2 text-sm font-medium"><span class="text-red">*</span>Фамилия </div>
+        <div class="form-input-cover">
+          <input type="text" class="rounded-lg form-input">
+        </div>
+      </label>
+      <label class="form-field">
+        <div class="mb-2 text-sm font-medium"><span class="text-red">*</span>Фамилия (на английском языке)</div>
+        <div class="form-input-cover">
+          <input type="text" class="rounded-lg form-input">
+        </div>
+      </label>
+      <label class="form-field">
+        <div class="mb-2 text-sm font-medium">Отчество</div>
+        <div class="form-input-cover">
+          <input type="text" class="rounded-lg form-input">
+        </div>
+      </label>
+      <label class="form-field">
+        <div class="mb-2 text-sm font-medium"><span class="text-red">*</span>Должность</div>
+        <div class="form-input-cover">
+          <input type="text" class="rounded-lg form-input">
+        </div>
+      </label>
+      <label class="form-field">
+        <div class="mb-2 text-sm font-medium"><span class="text-red">*</span>Электронная почта</div>
+        <div class="form-input-cover">
+          <input type="email" class="rounded-lg form-input">
+        </div>
+      </label>
+      <label class="form-field">
+        <div class="mb-2 text-sm font-medium"><span class="text-red">*</span>Телефон</div>
+        <div class="form-input-cover">
+          <input type="tel" class="rounded-lg form-input">
+        </div>
+      </label>
+    </div>
+    <div class="text-1.5xl font-alt font-semibold mb-6">Информация о компании</div>
+    <div class="grid sm:grid-cols-2 gap-x-8 gap-y-6">
+      <label class="sm:col-span-2 form-field">
+        <div class="mb-2 text-sm font-medium"><span class="text-red">*</span>Название компании</div>
+        <div class="form-input-cover">
+          <input type="text" class="rounded-lg form-input">
+        </div>
+      </label>
+      <label class="sm:col-span-2 form-field">
+        <div class="mb-2 text-sm font-medium"><span class="text-red">*</span>Название компании (на английском языке)</div>
+        <div class="form-input-cover">
+          <input type="text" class="rounded-lg form-input">
+        </div>
+      </label>
+      <label class="form-field">
+        <div class="mb-2 text-sm font-medium">Адрес сайта</div>
+        <div class="form-input-cover">
+          <input type="text" class="rounded-lg form-input">
+        </div>
+      </label>
+      <div></div>
+      <label class="form-field">
+        <div class="mb-2 text-sm font-medium"><span class="text-red">*</span>Страна</div>
+        <div class="form-input-cover">
+          <select class="rounded-lg form-input">
+            <option value="" selected hidden disabled>Выберите страну</option>
+            <option value="Россия">Россия</option>
+            <option value="Не Россия">Не Россия</option>
+          </select>
+          <div class="pr-4 pointer-events-none form-input-end">
+            <svg class="icon opacity-40">
+              <use xlink:href="img/icons.svg#to-right" />
+            </svg>
+          </div>
+        </div>
+      </label>
+      <label class="form-field">
+        <div class="mb-2 text-sm font-medium"><span class="text-red">*</span>Город</div>
+        <div class="form-input-cover">
+          <input type="text" class="rounded-lg form-input">
+        </div>
+      </label>
+      <label class="sm:col-span-2 form-field">
+        <div class="mb-2 text-sm font-medium"><span class="text-red">*</span>Основная сфера деятельности компании</div>
+        <div class="form-input-cover">
+          <select class="rounded-lg form-input">
+            <option value="" selected hidden disabled>Выберите деятельность</option>
+            <option value="деятельность 1">деятельность 1</option>
+            <option value="деятельность 2">деятельность 2</option>
+          </select>
+          <div class="pr-4 pointer-events-none form-input-end">
+            <svg class="icon opacity-40">
+              <use xlink:href="img/icons.svg#to-right" />
+            </svg>
+          </div>
+        </div>
+      </label>
+    </div>
+    <div class="mt-8 space-y-4">
+      <label class="flex items-start gap-3 cursor-pointer form-field">
+        <input type="checkbox" checked required class="form-input-checkbox">
+        <div class="flex-shrink-0 form-checkbox-target">
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#gal-ochka" />
+          </svg>
+        </div>
+        <div class="pt-1 text-xs opacity-70">
+          Даю согласие на получение рассылки информационного характера от организаторов
+        </div>
+      </label>
+      <label class="flex items-start gap-3 cursor-pointer form-field">
+        <input type="checkbox" checked required class="form-input-checkbox">
+        <div class="flex-shrink-0 form-checkbox-target">
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#gal-ochka" />
+          </svg>
+        </div>
+        <div class="pt-1 text-xs opacity-70">
+          Подтверждаю, что персональные данные, указанные мной в настоящей форме, полностью соответствуют Федеральному закону «О персональных данных» от 27 июля 2006 г. № 152-ФЗ, а также выражаю свое согласие на их обработку, хранение и передачу (в том числе посредством поручения такой обработки специализированной организации).
+        </div>
+      </label>
+      <label class="flex items-start gap-3 cursor-pointer form-field">
+        <input type="checkbox" checked required class="form-input-checkbox">
+        <div class="flex-shrink-0 form-checkbox-target">
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#gal-ochka" />
+          </svg>
+        </div>
+        <div class="pt-1 text-xs opacity-70">
+          Выражаю согласие с тем, что при посещении Cold Chain Eurasia возможно проведение фото- и видеосъемки, а также создание аудиозаписи с моим участием. При этом организатор оставляет за собой право использовать полученные фото- и видеоматериалы, аудиозаписи, сделанные во время мероприятия, без моего письменного согласия на использование фото- и видеосъемки, аудиозаписей с моим участием в публикациях и медиа-материалах включая, но не ограничиваясь публикациями в интернете, социальных сетях, новостях, пресс-релизах, брошюрах, приглашениях и других рекламных материалах.
+        </div>
+      </label>
+    </div>
+    <div class="flex mt-9">
+      <button class="p-8 -m-8 hover3d-wrap btn-group" type="submit">
+        <div class="hover3d-target">
+          <div class="rounded-full pointer-events-none btn btn-fill btn-gradient style-3d"><span class="hover3d-up">Зарегистрироваться</span></div>
+        </div>
+      </button>
+    </div>
+  </form>
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>

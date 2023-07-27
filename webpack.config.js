@@ -18,7 +18,7 @@ const htmlWebpackPluginDefaults = {
 module.exports = {
     entry: {
         index: './src/js/index.ts',
-        app: './src/js/app.ts',
+        // app: './src/js/app.ts',
     },
     resolve: {
         alias: {

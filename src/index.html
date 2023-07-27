@@ -1,23 +1,517 @@
-<!DOCTYPE html>
-<html lang="en">
+<%= _.template(require('./html-includes/header.html').default)() %>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Worked</title>
-</head>
+<section class="started">
+  <div class="absolute inset-0 started-background">
+    <picture>
+      <source srcset="img/started-background.webp" type="image/webp">
+      <img src="img/started-background.jpg" alt="" class="absolute-image">
+    </picture>
+  </div>
+  <div class="started-circle">
+    <img src="img/circle.png" alt="">
+  </div>
 
-<body>
-  <section id="root">
-    <div class="flex gap-4">
-      <button class="rounded-lg w-60 btn btn-black btn-fill">button</button>
-      <button class="rounded-lg w-60 btn btn-primary btn-fill">button</button>
-      <button class="rounded-lg w-60 btn btn-blue btn-fill">button</button>
-      <button class="rounded-lg w-60 btn btn-green btn-fill">button</button>
-      <button class="rounded-lg w-60 btn btn-yellow btn-fill">button</button>
+  <img src="img/snowflake.svg" alt="" class="started-snowflake started-snowflake-1">
+  <img src="img/snowflake.svg" alt="" class="started-snowflake started-snowflake-2">
+  <img src="img/snowflake.svg" alt="" class="started-snowflake started-snowflake-3">
+  <img src="img/snowflake.svg" alt="" class="started-snowflake started-snowflake-4">
+
+  <div class="started-content">
+    <div class="started-logo">
+      <img src="img/started-logo.png" alt="">
     </div>
-  </section>
-</body>
+    <div class="font-medium leading-none text-center uppercase my-7 sm:my-10 lg:text-lg lg:my-18 started-sign">
+      МЕЖДУНАРОДНАЯ КОНФЕРЕНЦИЯ ПО НЕПРЕРЫВНОЙ ХОЛОДИЛЬНОЙ ЦЕПИ
+    </div>
+    <div class="leading-none started-date"> 28 СЕНТЯБРЯ 2023 </div>
+    <div class="started-date-sign">Санкт-Петербург, КВЦ «Экспофорум»</div>
+    <div class="flex gap-3 mt-8 sm:gap-6 max-sm:flex-col started-btns sm:mt-15 max-sm:w-full">
+      <button class="p-4 -m-4 hover3d-wrap btn-group">
+        <div class="hover3d-target">
+          <div class="rounded-full started-btn btn btn-gradient btn-contur style-3d">
+            <span class="pointer-events-none hover3d-up">Подробнее</span>
+          </div>
+        </div>
+      </button>
+      <a href="javascript:;" class="p-4 -m-4 hover3d-wrap btn-group">
+        <div class="hover3d-target">
+          <div class="pl-5 rounded-full started-btn btn btn-gradient btn-fill style-3d">
+            <div class="flex flex-shrink-0 mr-2 bg-white rounded-full pointer-events-none w-9 h-9 bg-opacity-10 style-3d hover3d-up">
+              <svg class="m-auto text-xl icon hover3d-up">
+                <use xlink:href="img/icons.svg#snowflake" />
+              </svg>
+            </div>
+            <span class="pointer-events-none hover3d-up">Регистрация</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
 
-</html>
+</section>
+
+<section class="relative about">
+  <div class="absolute inset-0 about-background">
+    <img src="img/about-background.jpg" alt="" class="absolute-image">
+  </div>
+
+
+  <img src="img/snowflake-white.svg" alt="" class="about-snowflake about-snowflake-1">
+  <img src="img/snowflake-white.svg" alt="" class="about-snowflake about-snowflake-2">
+  <img src="img/snowflake-white.svg" alt="" class="about-snowflake about-snowflake-3">
+
+  <div class="about-images">
+    <div class="about-image-wrap hover3d-wrap">
+      <div class="about-image hover3d-target">
+        <div class="ratio ratio-1/1 about-image-inner">
+          <img src="img/about/fish.svg" alt="" class="object-scale-down absolute-image">
+        </div>
+      </div>
+    </div>
+    <div class="about-image-wrap hover3d-wrap">
+      <div class="about-image hover3d-target">
+        <div class="ratio ratio-1/1 about-image-inner">
+          <img src="img/about/milk.svg" alt="" class="object-scale-down absolute-image">
+        </div>
+      </div>
+    </div>
+    <div class="about-image-wrap hover3d-wrap">
+      <div class="about-image hover3d-target">
+        <div class="ratio ratio-1/1 about-image-inner">
+          <img src="img/about/eggs.svg" alt="" class="object-scale-down absolute-image">
+        </div>
+      </div>
+    </div>
+    <div class="about-image-wrap hover3d-wrap">
+      <div class="about-image hover3d-target">
+        <div class="ratio ratio-1/1 about-image-inner">
+          <img src="img/about/apple.svg" alt="" class="object-scale-down absolute-image">
+        </div>
+      </div>
+    </div>
+    <div class="about-image-wrap hover3d-wrap">
+      <div class="about-image hover3d-target">
+        <div class="ratio ratio-1/1 about-image-inner">
+          <img src="img/about/meat.svg" alt="" class="object-scale-down absolute-image">
+        </div>
+      </div>
+    </div>
+    <div class="about-image-wrap hover3d-wrap">
+      <div class="about-image hover3d-target">
+        <div class="ratio ratio-1/1 about-image-inner">
+          <img src="img/about/chicken.svg" alt="" class="object-scale-down absolute-image">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-white about-content">
+    <div class="title mb-7 md:mb-11">О конференции</div>
+    <div class="font-light leading-normal opacity-80">
+      Приглашаю вас принять участие в XXXIII Ежегодной международной конференции РАРЧ «Репродуктивные технологии сегодня и завтра», которая состоится с 6 по 9 сентября 2023 года в Нижнем Новгороде. Для членов РАРЧ это будет вторая встреча с прекрасным российским.
+      <br><br>
+      Мы рады, что они вновь приняли на себя обязанности радушных и гостеприимных хозяев.
+    </div>
+  </div>
+</section>
+
+<section class="partners section-padding">
+  <div class="grid gap-10 mb-20 md:gap-5 md:grid-cols-4 lg:grid-cols-5">
+    <div class="md:col-span-2">
+      <div class="mb-8 text-center sm:mb-10 title lg:mb-15" data-animation="fade-in-up">Организаторы</div>
+      <div class="grid grid-cols-2 gap-4 mx-auto sm:gap-5 sm:container" data-animation="fade-in-up">
+        <div class="p-4 partners-item partners-item-background">
+          <div class="ratio ratio-1/1">
+            <img src="img/partners/asorps.png" alt="" class="object-scale-down absolute-image">
+          </div>
+        </div>
+        <div class="p-4 partners-item partners-item-background">
+          <div class="ratio ratio-1/1">
+            <img src="img/partners/esg.png" alt="" class="object-scale-down absolute-image">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="max-lg:hidden"></div>
+    <div class="md:col-span-2">
+      <div class="mb-8 text-center sm:mb-10 title lg:mb-15" data-animation="fade-in-up">При поддержке</div>
+      <div class="grid grid-cols-2 gap-4 mx-auto sm:gap-5 sm:container" data-animation="fade-in-up">
+        <div class="p-4 partners-item partners-item-background">
+          <div class="ratio ratio-1/1">
+            <img src="img/partners/holodunion.png" alt="" class="object-scale-down absolute-image">
+          </div>
+        </div>
+        <div class="p-4 partners-item partners-item-background">
+          <div class="ratio ratio-1/1">
+            <img src="img/partners/kstp.png" alt="" class="object-scale-down absolute-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-8 text-center sm:mb-10 title lg:mb-15" data-animation="fade-in-up">Партнеры мероприятия</div>
+  <div class="grid grid-cols-2 gap-4 mx-auto mb-20 sm:container md:grid-cols-5 lg:gap-5 max-lg:text-sm">
+    <div class="partners-item " data-animation="fade-in-up">
+      <div class="p-4 partners-item-background">
+        <div class="ratio ratio-[23/18] ">
+          <img src="img/partners/esg.png" alt="" class="object-scale-down absolute-image">
+        </div>
+      </div>
+      <div class="py-5 text-center">
+        <div class="opacity-60">Генеральный партнер</div>
+      </div>
+    </div>
+    <div class="partners-item " data-animation="fade-in-up">
+      <div class="p-4 partners-item-background">
+        <div class="ratio ratio-[23/18] ">
+          <img src="img/partners/sber.png" alt="" class="object-scale-down absolute-image">
+        </div>
+      </div>
+      <div class="py-5 text-center">
+        <div class="opacity-60">Банк-партнер</div>
+      </div>
+    </div>
+    <div class="partners-item " data-animation="fade-in-up">
+      <div class="p-4 partners-item-background">
+        <div class="ratio ratio-[23/18] ">
+          <img src="img/partners/pesceinrete.png" alt="" class="object-scale-down absolute-image">
+        </div>
+      </div>
+      <div class="py-5 text-center">
+        <div class="opacity-60">Бизнес-партнер</div>
+      </div>
+    </div>
+    <div class="partners-item " data-animation="fade-in-up">
+      <div class="p-4 partners-item-background">
+        <div class="ratio ratio-[23/18] ">
+          <img src="img/partners/vietfish.png" alt="" class="object-scale-down absolute-image">
+        </div>
+      </div>
+      <div class="py-5 text-center">
+        <div class="opacity-60">Официальный партнер</div>
+      </div>
+    </div>
+    <div class="partners-item " data-animation="fade-in-up">
+      <div class="p-4 partners-item-background">
+        <div class="ratio ratio-[23/18] ">
+          <img src="img/partners/thedeck.png" alt="" class="object-scale-down absolute-image">
+        </div>
+      </div>
+      <div class="py-5 text-center">
+        <div class="opacity-60">Официальный партнер</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-8 text-center sm:mb-10 title lg:mb-15" data-animation="fade-in-up">Информационные партнеры</div>
+  <div class="grid grid-cols-2 gap-4 mx-auto mb-20 sm:container md:grid-cols-5 lg:gap-5 ">
+    <div class="p-4 partners-item" data-animation="fade-in-up">
+      <div class="ratio ratio-1/1">
+        <img src="img/partners/thedeck.png" alt="" class="object-scale-down absolute-image">
+      </div>
+    </div>
+    <div class="p-4 partners-item" data-animation="fade-in-up">
+      <div class="ratio ratio-1/1">
+        <img src="img/partners/fishsite.png" alt="" class="object-scale-down absolute-image">
+      </div>
+    </div>
+    <div class="p-4 partners-item" data-animation="fade-in-up">
+      <div class="ratio ratio-1/1">
+        <img src="img/partners/balikhaber.png" alt="" class="object-scale-down absolute-image">
+      </div>
+    </div>
+    <div class="p-4 partners-item" data-animation="fade-in-up">
+      <div class="ratio ratio-1/1">
+        <img src="img/partners/ilpeske.png" alt="" class="object-scale-down absolute-image">
+      </div>
+    </div>
+    <div class="p-4 partners-item" data-animation="fade-in-up">
+      <div class="ratio ratio-1/1">
+        <img src="img/partners/vietfish.png" alt="" class="object-scale-down absolute-image">
+      </div>
+    </div>
+
+  </div>
+  <div data-animation="fade-in-up">
+    <button class="mx-auto rounded-full btn btn-gradient btn-contur">
+      Все партнеры
+      <svg class="ml-1 icon text-primary">
+        <use xlink:href="img/icons.svg#to-right" />
+      </svg>
+    </button>
+  </div>
+</section>
+
+<section class="programm section-padding">
+  <div class="mb-8 text-center title sm:mb-10 lg:mb-15" data-animation="fade-in-up">Деловая программа</div>
+  <div class="space-y-6">
+    <!-- 9:00 - 10:00 -->
+    <div class="items-center programm-item" data-animation="fade-in-up">
+      <div class="programm-item-left">
+        <div class="text-lg lg:text-1.5xl">9:00 - 10:00</div>
+      </div>
+      <div class="programm-item-right">
+        <div class="text-lg lg:text-1.5xl uppercase font-bold font-alt">РЕГИСТРАЦИЯ УЧАСТНИКОВ МЕРОПРИЯТИЯ</div>
+      </div>
+    </div>
+
+    <!-- 10:00 - 11:00 -->
+    <div class="programm-item" data-animation="fade-in-up">
+      <div class="programm-item-left">
+        <div class="text-lg lg:text-1.5xl">10:00 - 11:00</div>
+        <div class="mt-2 uppercase lg:mt-4 opacity-60 max-lg:text-sm">MAIN ARENA PASSAGE</div>
+      </div>
+      <div class="programm-item-right">
+        <div class="text-lg lg:text-1.5xl uppercase font-bold font-alt">ОФИЦИАЛЬНАЯ ЦЕРЕМОНИЯ ОТКРЫТИЯ И ОСМОТР ЭКСПОЗИЦИИ</div>
+        <div class="mt-5 opacity-60">
+          Приглашение к участию направлено организаторам и участникам мероприятия, представителям российских
+          министерств и ведомств, иностранных делегаций, руководителям ассоциаций и союзов.
+        </div>
+      </div>
+    </div>
+
+    <!-- 11:30 - 13:00 -->
+    <div class="programm-item" data-animation="fade-in-up">
+      <div class="pt-3 programm-item-left">
+        <div class="text-lg lg:text-1.5xl">11:30 - 13:00</div>
+        <div class="mt-2 uppercase lg:mt-4 opacity-60 max-lg:text-sm">CONFERENCE HALL Е8-Е12</div>
+
+        <div class="flex gap-4 mt-8">
+          <svg class="icon text-2xl text-[#F9823F]">
+            <use xlink:href="img/icons.svg#star" />
+          </svg>
+          <svg class="text-2xl icon opacity-60">
+            <use xlink:href="img/icons.svg#headphones" />
+          </svg>
+          <svg class="text-2xl icon opacity-60">
+            <use xlink:href="img/icons.svg#link" />
+          </svg>
+        </div>
+
+        <button class="gap-2 rounded-full btn btn-gray btn-light mt-7 px-14 bg-l2">
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#play" />
+          </svg>
+          <span class="font-semibold">Online</span>
+        </button>
+      </div>
+      <div class="pt-3 pb-10 programm-item-right">
+        <div class="text-lg lg:text-1.5xl uppercase font-bold font-alt leading-normal">
+          ПЛЕНАРНОЕ ЗАСЕДАНИЕ ГЛОБАЛЬНОГО РЫБОПРОМЫШЛЕННОГО ФОРУМА
+          "УМНОЕ РЫБОЛОВСТВО: ИССЛЕДОВАНИЯ, ДОБЫЧА, ПЕРЕРАБОТКА
+        </div>
+
+
+        <button class="flex items-center mt-4 font-semibold programm-item-link">
+          Детали мероприятия
+          <svg class="ml-1 icon text-primary">
+            <use xlink:href="img/icons.svg#to-right" />
+          </svg>
+        </button>
+        <div class="flex gap-10 max-lg:flex-col lg:gap-14">
+          <div class="flex flex-col">
+            <div class="mt-6 text-lg font-bold uppercase lg:text-xl font-alt">
+              ОРГАНИЗАТОРЫ:
+            </div>
+            <div class="flex items-center flex-grow gap-8 mt-4">
+              <img src="img/programm/federal.png" alt="">
+              <img src="img/programm/vniro.png" alt="">
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <div class="mt-6 text-lg font-bold uppercase lg:text-xl font-alt">
+              ИНФОРМАЦИОННЫЙ ПАРТНЁР КОНФЕРЕНЦИИ:
+            </div>
+            <div class="flex items-center flex-grow gap-8 mt-4">
+              <img src="img/programm/gastronomia.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14:00 - 15:30 -->
+    <div class="programm-item" data-animation="fade-in-up">
+      <div class="top-0 self-start pt-3 md:sticky programm-item-left">
+        <div class="text-lg lg:text-1.5xl">14:00 - 15:30</div>
+        <div class="mt-2 uppercase lg:mt-4 opacity-60 max-lg:text-sm">CONFERENCE HALL H4</div>
+
+        <div class="flex gap-4 mt-8">
+          <svg class="text-2xl icon opacity-60">
+            <use xlink:href="img/icons.svg#headphones" />
+          </svg>
+          <svg class="text-2xl icon opacity-60">
+            <use xlink:href="img/icons.svg#link" />
+          </svg>
+        </div>
+
+      </div>
+      <div class="pt-3 pb-10 programm-item-right">
+        <div class="text-lg lg:text-1.5xl uppercase font-bold font-alt leading-normal">
+          ПЛЕНАРНОЕ ЗАСЕДАНИЕ ГЛОБАЛЬНОГО РЫБОПРОМЫШЛЕННОГО ФОРУМА
+          "УМНОЕ РЫБОЛОВСТВО: ИССЛЕДОВАНИЯ, ДОБЫЧА, ПЕРЕРАБОТКА
+        </div>
+        <div class="mt-4 opacity-60">
+          В последние годы структура поставок кардинально изменилась: ограничения, вызванные коронавирусом в 2020-2021 годах, и новые санкции, введенные в начале этого года, привели к структурным изменениям. Стоимость и качество логистики приобретают иное значение. Вопрос о том, устарел ли рыболовецкий порт или сохранил свою актуальность, является интересной темой для обсуждения и дебатов.
+        </div>
+        <div class="text-lg lg:text-1.5xl uppercase font-bold font-alt leading-normal mt-6">
+          ТЕМЫ ДЛЯ ОБСУЖДЕНИЯ:
+        </div>
+        <ul class="mt-5 list-disc list-inside opacity-60">
+          <li>Новые подходы к формированию цепочек поставок </li>
+          <li>Строительство современного рыболовного флота </li>
+          <li>Железнодорожные перевозки рыбной продукции </li>
+          <li>Логистика рыбной продукции и обеспечение качества </li>
+          <li>Новые разработки в области рефрижераторных перевозок </li>
+          <li>Автомобильные перевозки рыбной продукции</li>
+        </ul>
+        <div class="text-lg lg:text-1.5xl uppercase font-bold font-alt leading-normal mt-6">
+          СПИКЕРЫ:
+        </div>
+        <ol class="pl-4 mt-5 space-y-4 list-decimal opacity-60">
+          <li>
+            Хасан Лихов, заместитель руководителя Федерального агентства по рыболовствуСнабженческие цепочки в условиях меняющейся рыночной среды
+          </li>
+          <li>
+            Сергей Сенников, заместитель директора по международным делам и связям с общественностью, NOREBOP Производство мороженой рыбы на борту современного рыболовного судна
+          </li>
+          <li>
+            Андрей Великородный, председатель правления, Crystal AllianceТранспортный и рефрижераторный флот в 2030 году - новые современные суда или средний возраст 45+
+          </li>
+        </ol>
+        <div class="text-lg lg:text-1.5xl uppercase font-bold font-alt leading-normal mt-6">
+          SPEAKERS:
+        </div>
+        <div class="grid gap-6 mt-5 sm:grid-cols-2">
+          <% for(let i = 0; i < 10; i++) { %>
+          <div class="flex items-center gap-3">
+            <div class="overflow-hidden rounded-full w-14 ratio ratio-1/1">
+              <img src="img/test.jpg" alt="" class="object-cover absolute-image">
+            </div>
+            <div>
+              <div class="font-semibold">Дмитрий Патрушев</div>
+              <div class="mt-1 text-xs opacity-60">Министр сельского хозяйства Российской Федерации</div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+        <div class="text-lg lg:text-1.5xl uppercase font-bold font-alt leading-normal mt-10">
+          МОДЕРАТОР:
+        </div>
+        <div class="grid gap-6 mt-5 sm:grid-cols-2">
+          <div class="flex items-center gap-3">
+            <div class="overflow-hidden rounded-full w-14 ratio ratio-1/1">
+              <img src="img/test.jpg" alt="" class="object-cover absolute-image">
+            </div>
+            <div>
+              <div class="font-semibold">Дмитрий Патрушев</div>
+              <div class="mt-1 text-xs opacity-60">Министр сельского хозяйства Российской Федерации</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="place section-padding">
+  <div class="absolute inset-0 place-background">
+    <img src="img/place-background.jpg" alt="" class="object-cover absolute-image">
+  </div>
+
+  <img src="img/snowflake-white.svg" alt="" class="place-snowflake place-snowflake-1">
+  <img src="img/snowflake-white.svg" alt="" class="place-snowflake place-snowflake-2">
+  <img src="img/snowflake-white.svg" alt="" class="place-snowflake place-snowflake-3">
+
+  <div class="place-content">
+    <div class="mb-8 text-center title sm:mb-10 lg:mb-15" data-animation="fade-in-up">место проведения</div>
+    <div class="grid place-images md:grid-cols-2 gap-7" data-animation="fade-in-up">
+      <div class="relative place-image ratio ratio-[3/2] max-md:ratio-16/9">
+        <picture>
+          <source srcset="img/place-1.webp" type="image/webp">
+          <img src="img/place-1.jpg" alt="" class="object-cover absolute-image" loading="lazy">
+        </picture>
+      </div>
+      <a href="img/place-2.png" data-fancybox class="place-card">
+        <div class="text-1.5xl sm:text-2.5xl font-alt font-semibold leading-none">План проезд</div>
+        <div class="max-sm:text-sm sm:mt-2 opacity-60">к конгресно-выставочному центру</div>
+        <img src="img/place-2.png" alt="" class="-mt-3">
+      </a>
+    </div>
+    <div class="mt-10 place-description sm:mt-7" data-animation="fade-in-up">
+      <div class="text-1.5xl font-semibold uppercase font-alt">
+        ДОСТОПРИМЕЧАТЕЛЬНОСТИ РЯДОМ С ЭКСПОФОРУМОМ
+      </div>
+      <div class="mt-5 leading-normal sm:mt-10">
+        Концепция и архитектурный дизайн комплекса были разработаны консорциумом ведущих архитектурных бюро «Герасимов и партнеры», NPS Tchoban voss, «Чобан и партнеры» и ООО «Проектсервис».
+        <br><br>
+        Совместными усилиями проектировщиков и строителей удалось создать не только многофункциональный комплекс, который аккумулировал опыт крупнейших европейских и азиатских конгресс-центров, но и уникальный объект архитектуры, претендующий на звание символа Петербурга.Концепция и архитектурный дизайн комплекса были разработаны консорциумом ведущих архитектурных бюро «Герасимов и партнеры», NPS Tchoban voss, «Чобан и партнеры» и ООО «Проектсервис».
+        <br><br>
+        Совместными усилиями проектировщиков и строителей удалось создать не только многофункциональный комплекс, который аккумулировал опыт крупнейших европейских и азиатских конгресс-центров, но и уникальный объект архитектуры, претендующий на звание символа Петербурга.
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="contacts section-padding">
+  <div class="mb-8 text-center title sm:mb-10 lg:mb-15" data-animation="fade-in-up">КОНТАКТЫ </div>
+  <div class=" contacts-buner" data-animation="fade-in-up">
+    <div class="flex items-center gap-6 sm:gap-9">
+      <div class="relative flex-shrink-0 w-32 xs:w-40 sm:w-52 ratio ratio-1/1 contacts-buner-image ">
+        <img src="img/contacts-buner-image.jpg" alt="" class="object-cover absolute-image" loading="lazy">
+        <div class="absolute inset-4">
+          <img src="img/contacts-buner-logo.png" alt="" class="object-scale-down absolute-image" loading="lazy">
+        </div>
+      </div>
+
+      <div class="leading-none">
+        <div class="text-1.5xl sm:text-2.5xl font-alt font-semibold">Cold Chain Eurasia</div>
+        <div class="mt-3 leading-tight uppercase lg:text-xl max-sm:hidden">МЕЖДУНАРОДНАЯ КОНФЕРЕНЦИЯ ПО НЕПРЕРЫВНОЙ ХОЛОДИЛЬНОЙ ЦЕПИ</div>
+        <a href="javascript:;" class="flex items-center gap-3 mt-7 max-sm:hidden">
+          <img src="img/gradient-email.svg" alt="">
+          <span class="text-lg md:text-1.5xl">coldchain@rusfishexpo.com</span>
+        </a>
+        <a href="javascript:;" class="flex items-center gap-3 mt-2 max-sm:hidden">
+          <img src="img/gradient-phone.svg" alt="">
+          <span class="text-lg md:text-1.5xl font-bold">+7 (495) 215-06-75</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="mt-5 xs:px-3 sm:hidden" data-animation="fade-in-up">
+    <div class="leading-tight uppercase lg:text-xl">МЕЖДУНАРОДНАЯ КОНФЕРЕНЦИЯ ПО НЕПРЕРЫВНОЙ ХОЛОДИЛЬНОЙ ЦЕПИ</div>
+    <a href="javascript:;" class="flex items-center gap-3 mt-3">
+      <img src="img/gradient-email.svg" alt="">
+      <span class="text-lg md:text-1.5xl">coldchain@rusfishexpo.com</span>
+    </a>
+    <a href="javascript:;" class="flex items-center gap-3 mt-2">
+      <img src="img/gradient-phone.svg" alt="">
+      <span class="text-lg md:text-1.5xl font-bold">+7 (495) 215-06-75</span>
+    </a>
+  </div>
+  <div class="mt-10 mb-7 lg:mb-10 text-2.5xl font-semibold font-alt" data-animation="fade-in-up">Наша команда</div>
+  <div class="grid gap-5 md:grid-cols-2 team-items lg:gap-7">
+    <% for(let i = 0; i < 4; i++) { %>
+    <div class="team-item" data-animation="fade-in-up">
+      <div class="relative flex-shrink-0 w-20 h-20 xs:w-32 xs:h-32 sm:w-40 sm:h-40 team-item-image">
+        <img src="img/test.jpg" alt="" class="object-cover absolute-image" loading="lazy">
+      </div>
+      <div>
+        <div class="xs:text-1.5xl sm:text-2.5xl font-alt font-semibold">Иван Иванов</div>
+        <div class="sm:mt-2 max-xs:text-sm">Координатор</div>
+        <a href="javascript:;" class="flex items-center gap-2 mt-2 xs:mt-4 xs:gap-3">
+          <img src="img/gradient-email.svg" alt="">
+          <span class="max-xs:text-sm">coldchain@rusfishexpo.com</span>
+        </a>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</section>
+
+<section class="map">
+  <div class="map-inner" id="contact-map"></div>
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>

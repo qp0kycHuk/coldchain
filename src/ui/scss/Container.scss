@@ -4,11 +4,6 @@
   --section-gap-bottom: 20px;
 }
 
-.container {
-  width    : 100%;
-  max-width: var(--section-width);
-  margin   : 0 auto;
-}
 
 dialog,
 section,
@@ -24,12 +19,12 @@ section {
 
 @screen md {
   :root {
-    --section-width: calc(theme(screens.md) - 29.98px);
+    --section-width: calc(theme(container.md));
   }
 }
 
 @screen lg {
   :root {
-    --section-width: calc(theme(screens.lg) - 29.98px);
+    --section-width: calc(theme(container.lg));
   }
 }

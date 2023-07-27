@@ -1,0 +1,85 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+<section class="relative page-top">
+  <div class="absolute inset-0 page-top-background">
+    <img src="img/page-top.jpg" alt="" class="object-cover absolute-image">
+  </div>
+  <div class="page-top-content">
+    <div class="title">ТРЕВЕЛ ПОДДЕРЖКА</div>
+  </div>
+</section>
+
+<section class="travel section-padding bg-l3">
+  <div class="grid mb-20 md:grid-cols-2 gap-7">
+    <div>
+      <div class="leading-normal opacity-80">
+        Мы заинтересованы в том, чтобы ваше пребывание в Санкт-Петербурге было комфортным, а работа на выставке результативной и приносила удовольствие.Для вашего удобства, мы рекомендуем воспользоваться услугами официального тревел - партнёра мероприятия:
+      </div>
+      <div class="flex items-center mt-12 gap-7">
+        <div class="flex-shrink-0 w-24 overflow-hidden ratio ratio-1/1 rounded-3xl">
+          <img src="img/center.png" alt="" class="absolute-image">
+        </div>
+        <div class="font-bold sm:text-xl font-alt">
+          Городской центр бронирования и туризма <br>
+          WWW.CBTC.RU
+        </div>
+      </div>
+    </div>
+    <div class="travel-card">
+      <div class="px-3 py-5 sm:px-10 travel-card-top">
+        <img src="img/gradient-hotel-love.svg" alt="" class="mr-2">
+        <div class="sm:text-1.5xl font-bold font-alt">КОМПАНИЯ ОКАЗЫВАЕТ УСЛУГИ:</div>
+      </div>
+      <div class="px-3 py-5 sm:px-10">
+        <ul class="leading-loose list-disc list-inside opacity-80">
+          <li>Бронирование гостиниц</li>
+          <li>Бронирование авиа и ж/д билетов</li>
+          <li>Организация туристических виз</li>
+          <li>Визовая поддержка</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="grid md:grid-cols-2 gap-7">
+    <div>
+      <div class="text-lg sm:text-2.5xl mb-5 sm:mb-10 font-alt font-semibold">По вопросам бронирования отелей</div>
+      <div class="team-item">
+        <div class="relative flex-shrink-0 w-20 h-20 xs:w-32 xs:h-32 sm:w-40 sm:h-40 team-item-image">
+          <img src="img/test.jpg" alt="" class="object-cover absolute-image">
+        </div>
+        <div>
+          <div class="xs:text-1.5xl sm:text-2.5xl font-alt font-semibold">Иван Иванов</div>
+          <div class="sm:mt-2 max-xs:text-sm">
+            +7 (495) 231-33-99, доб. 719 <br>
+            +7 (926) 236-33-65
+          </div>
+          <a href="javascript:;" class="flex items-center gap-2 mt-2 xs:mt-4 xs:gap-3">
+            <img src="img/gradient-email.svg" alt="">
+            <span class="max-xs:text-sm">solonenko@cbtc.ru</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="text-lg sm:text-2.5xl mb-5 sm:mb-10 font-alt font-semibold">По вопросам визовой поддержки</div>
+      <div class="team-item">
+        <div class="relative flex-shrink-0 w-20 h-20 xs:w-32 xs:h-32 sm:w-40 sm:h-40 team-item-image">
+          <img src="img/test.jpg" alt="" class="object-cover absolute-image">
+        </div>
+        <div>
+          <div class="xs:text-1.5xl sm:text-2.5xl font-alt font-semibold">Иван Иванов</div>
+          <div class="sm:mt-2 max-xs:text-sm">
+            +7 (495) 231-33-99, доб. 719 <br>
+            +7 (926) 236-33-65
+          </div>
+          <a href="javascript:;" class="flex items-center gap-2 mt-2 xs:mt-4 xs:gap-3">
+            <img src="img/gradient-email.svg" alt="">
+            <span class="max-xs:text-sm">solonenko@cbtc.ru</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>

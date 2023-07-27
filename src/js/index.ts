@@ -1,35 +1,33 @@
-import showPass from './show-pass'
-import theme from './theme'
 import fancybox from './fancybox'
+import animations from './animations'
+import maps from './maps'
 import phonemask from './phonemask/phonemask'
 import scrollTo from './scrollTo'
-import tab from 'npm-kit-tab'
 import toggle from 'npm-kit-toggle'
 import ripple from '@qpokychuk/ripple'
-import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade } from 'swiper'
+// import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade } from 'swiper'
 
 import '../scss/index.scss'
 
-Swiper.use([Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade])
-Swiper.defaults.touchStartPreventDefault = false
-window.Swiper = Swiper
+// Swiper.use([Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade])
+// Swiper.defaults.touchStartPreventDefault = false
+// window.Swiper = Swiper
 
-interface CustomWindow extends Window {
-  Swiper: typeof Swiper
-}
+// interface CustomWindow extends Window {
+// Swiper: typeof Swiper
+// }
 
-declare let window: CustomWindow
+// declare let window: CustomWindow
 
 window.addEventListener('DOMContentLoaded', () => loadHandler())
 
 function loadHandler() {
-  showPass.init()
   scrollTo.init()
-  tab.init()
   toggle.init()
   ripple.init()
-  theme.init()
   fancybox.init()
+  animations.init()
+  maps.init()
   phonemask.init('[type="tel"]')
 
   ripple.attach('.btn')

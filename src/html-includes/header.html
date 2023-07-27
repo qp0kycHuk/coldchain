@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cold Chain Eurasia</title>
+  <script>
+    window.coords = [59.762129, 30.356076]
+  </script>
+</head>
+
+<body>
+  <div id="root">
+
+    <div class="loader"> </div>
+
+    <header class="py-2 sm:py-4 header bg-l3">
+      <a href="/" class="block w-24 sm:w-40 header-logo">
+        <img src="img/logo.png" alt="">
+      </a>
+      <div class="flex gap-12 header-nav">
+        <div class="submenu" data-toggle-cover>
+          <button class="relative btn btn-text btn-gray hover:underline max-lg:hidden" data-toggle-link>
+            <div class="absolute -inset-6"></div>
+            <span class="opacity-80">О мероприятии</span>
+            <svg class="ml-2 text-xs icon">
+              <use xlink:href="img/icons.svg#to-top" />
+            </svg>
+          </button>
+          <div class="space-y-3 submenu-list" data-toggle-content>
+            <button class="gap-2 btn btn-text hover:underline">
+              <span class="font-medium">Тревел поддержка</span>
+            </button>
+            <button class="gap-2 btn btn-text hover:underline">
+              <span class="font-medium">Правила посещения</span>
+            </button>
+          </div>
+        </div>
+        <button class="relative btn btn-text btn-gray hover:underline max-lg:hidden">
+          <div class="absolute -inset-6"></div>
+          <span class="opacity-80">Деловая программа</span>
+        </button>
+        <button class="relative btn btn-text btn-gray hover:underline max-lg:hidden">
+          <div class="absolute -inset-6"></div>
+          <span class="opacity-80">Регистрация</span>
+        </button>
+        <button class="relative btn btn-text btn-gray hover:underline max-lg:hidden">
+          <div class="absolute -inset-6"></div>
+          <span class="opacity-80">Контакты</span>
+        </button>
+        <div class="submenu" data-toggle-cover>
+          <button class="btn btn-text" data-toggle-link>
+            <img src="img/rus.png" alt="" class="w-6">
+            <svg class="ml-2 text-xs icon">
+              <use xlink:href="img/icons.svg#to-top" />
+            </svg>
+          </button>
+          <div class="space-y-3 submenu-list" data-toggle-content>
+            <button class="gap-2 btn btn-text">
+              <img src="img/rus.png" alt="" class="w-6">
+              <span class="font-medium">Русский</span>
+            </button>
+            <button class="gap-2 btn btn-text">
+              <img src="img/eng.png" alt="" class="w-6">
+              <span class="font-medium">English</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="header-contact">
+        <button class="relative btn btn-gray btn-text hover:underline">
+          <div class="absolute -inset-3 lg:-inset-6"></div>
+          <span class="font-semibold sm:text-lg max-sm:hidden">+7 (499) 922-44-17</span>
+          <svg class="text-xl icon sm:hidden text-primary">
+            <use xlink:href="img/icons.svg#phone" />
+          </svg>
+        </button>
+      </div>
+    </header>

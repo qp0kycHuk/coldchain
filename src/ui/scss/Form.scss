@@ -26,30 +26,6 @@
         color           : theme('colors.gray.DEFAULT / 60%');
         opacity         : .8;
 
-        &:placeholder {
-          color: theme('colors.gray.DEFAULT / 60%');
-        }
-      }
-
-
-      &[type="date"]::-webkit-calendar-picker-indicator,
-      &[type="time"]::-webkit-calendar-picker-indicator {
-        background    : none;
-        pointer-events: none;
-      }
-
-      &:first-of-type {
-        border-start-start-radius: var(--radius);
-        border-end-start-radius  : var(--radius);
-      }
-
-      &:last-of-type {
-        border-end-end-radius  : var(--radius);
-        border-start-end-radius: var(--radius);
-      }
-
-      &:not(:first-of-type) {
-        margin-left: -1px;
       }
 
 
