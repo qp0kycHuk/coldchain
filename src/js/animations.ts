@@ -11,7 +11,7 @@ function init() {
   })
 
   window.addEventListener('beforeunload', () => {
-    document.body.classList.remove('loaded')
+    // document.body.classList.remove('loaded')
   })
 }
 
