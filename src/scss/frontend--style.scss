@@ -134,12 +134,23 @@ body {
   leading-trim  : both;
   text-edge     : cap;
 
+  &.menu-opened {
+    overflow: hidden;
+  }
 }
 
 
 .active-enabled {
   display: none !important;
 
+}
+
+.is-active-disabled:is(.toggle-active, .active) {
+  display: none;
+}
+
+.is-active-enabled:not(:is(.toggle-active, .active)) {
+  display: none;
 }
 
 .toggle-active,
@@ -168,6 +179,11 @@ body {
     box-shadow   : 0 1px 3px 0 rgba(32, 41, 76, 0.10);
     transition   : .2s ease;
 
+    @media(max-width:$lg) {
+      right: 0;
+      left : auto;
+    }
+
     &:not(.toggle-active) {
       opacity       : 0;
       transform     : translateY(10px);
@@ -186,6 +202,44 @@ body {
   z-index        : theme('zIndex[4]');
 }
 
+.menu {
+  position      : fixed;
+  top           : 0;
+  left          : -80px;
+  width         : 440px;
+  max-width     : calc(100% + 60px);
+  height        : 100%;
+  overflow      : auto;
+  padding-bottom: 80px;
+  padding-left  : 80px;
+  background    : var(--bg3);
+  transition    : .75s cubic-bezier(.28, 1.66, .26, 1);
+  z-index       : theme('zIndex[8]');
+  clip-path     : polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%);
+
+  &:not(.toggle-active) {
+    transform: translateX(-80px);
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  }
+
+  &-header {
+    padding-right: 16px;
+    padding-left : 16px;
+  }
+
+  &-shadow {
+    position  : fixed;
+    inset     : 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: .25s ease;
+    z-index   : theme('zIndex[7]');
+  }
+
+  &:not(.toggle-active)+&-shadow {
+    opacity       : 0;
+    pointer-events: none;
+  }
+}
 
 .started {
   position      : relative;

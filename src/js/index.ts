@@ -33,4 +33,19 @@ function loadHandler() {
   ripple.attach('.btn')
   ripple.attach('.waved')
   ripple.deAttach('.btn-text')
+
+  window.addEventListener('toggleopen', toggleopenHaandler)
+  window.addEventListener('toggleclose', togglecloseHaandler)
+}
+
+function toggleopenHaandler(event: any) {
+  if (event.detail.target.classList.contains('menu')) {
+    document.body.classList.add('menu-opened')
+  }
+}
+
+function togglecloseHaandler(event: any) {
+  if (event.detail.target.classList.contains('menu')) {
+    document.body.classList.remove('menu-opened')
+  }
 }

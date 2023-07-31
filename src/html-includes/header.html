@@ -17,12 +17,17 @@
     <div class="loader"> </div>
 
     <header class="py-2 sm:py-4 header bg-l3">
+      <button class="btn btn-text mr-6" data-toggle-link="menu">
+        <svg class="icon text-2xl opacity-60">
+          <use xlink:href="img/icons.svg#menu" />
+        </svg>
+      </button>
       <a href="/" class="block w-24 sm:w-40 header-logo">
         <img src="img/logo.png" alt="">
       </a>
-      <div class="flex gap-12 header-nav">
-        <div class="submenu" data-toggle-cover>
-          <button class="relative btn btn-text btn-gray hover:underline max-lg:hidden" data-toggle-link>
+      <div class="flex gap-12 header-nav max-lg:ml-auto max-lg:mr-6">
+        <div class="submenu max-lg:hidden" data-toggle-cover>
+          <button class="relative btn btn-text btn-gray hover:underline " data-toggle-link>
             <div class="absolute -inset-6"></div>
             <span class="opacity-80">О мероприятии</span>
             <svg class="ml-2 text-xs icon">
@@ -79,3 +84,73 @@
         </button>
       </div>
     </header>
+
+    <div class="menu" id="menu">
+      <header class="menu-header py-2 sm:py-4 header bg-l3">
+        <button class="btn btn-text mr-6" data-toggle-link="menu">
+          <svg class="icon text-2xl opacity-60">
+            <use xlink:href="img/icons.svg#cross" />
+          </svg>
+        </button>
+        <a href="/" class="block w-24 sm:w-40 header-logo">
+          <img src="img/logo.png" alt="">
+        </a>
+        <div class="flex gap-12 header-nav max-lg:ml-auto ">
+          <div class="submenu" data-toggle-cover>
+            <button class="btn btn-text" data-toggle-link>
+              <img src="img/rus.png" alt="" class="w-6">
+              <svg class="ml-2 text-xs icon">
+                <use xlink:href="img/icons.svg#to-top" />
+              </svg>
+            </button>
+            <div class="space-y-3 submenu-list" data-toggle-content>
+              <button class="gap-2 btn btn-text">
+                <img src="img/rus.png" alt="" class="w-6">
+                <span class="font-medium">Русский</span>
+              </button>
+              <button class="gap-2 btn btn-text">
+                <img src="img/eng.png" alt="" class="w-6">
+                <span class="font-medium">English</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div data-toggle-cover>
+        <button data-toggle-link class="btn btn-primary w-full px-4 justify-start text-gray">
+          О мероприятии
+          <svg class="ml-2 text-xs icon">
+            <use xlink:href="img/icons.svg#to-top" />
+          </svg>
+        </button>
+        <div data-toggle-content class="is-active-enabled flex-col flex">
+          <a href="javascript:;" class="btn btn-primary w-full px-4 justify-start text-gray">Тревел поддержка</a>
+          <a href="javascript:;" class="btn btn-primary w-full px-4 justify-start text-gray">Правила посещения</a>
+        </div>
+      </div>
+      <a href="javascript:;" class="btn btn-primary w-full px-4 justify-start text-gray">Деловая программа</a>
+      <a href="javascript:;" class="btn btn-primary w-full px-4 justify-start text-gray">Регистрация</a>
+      <a href="javascript:;" class="btn btn-primary w-full px-4 justify-start text-gray">Контакты</a>
+      <div class="px-4 mt-20">
+        <a href="javascript:;" class="gap-2 mb-4 btn btn-text btn-gray justify-start ">
+          <img src="img/gradient-email.svg" alt="">
+          coldchain@rusfishexpo.com
+        </a>
+        <a href="javascript:;" class="gap-2 btn btn-text btn-gray justify-start ">
+          <img src="img/gradient-phone.svg" alt="">
+          <span class="text-1.5xl font-semibold">+7 (495) 215-06-75</span>
+        </a>
+      </div>
+      <div class="px-4 mt-16 gap-8 flex">
+        <a href="" class="btn btn-text">
+          <img src="img/vk-colored.svg" alt="" class="icon text-[52px]">
+        </a>
+        <a href="" class="btn btn-text">
+          <img src="img/telegram-colored.svg" alt="" class="icon text-[52px]">
+        </a>
+        <a href="" class="btn btn-text">
+          <img src="img/whatsapp-colored.svg" alt="" class="icon text-[52px]">
+        </a>
+      </div>
+    </div>
+    <div class="menu-shadow" data-toggle-link="menu"></div>
