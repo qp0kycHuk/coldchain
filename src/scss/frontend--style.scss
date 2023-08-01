@@ -140,9 +140,12 @@ body {
 }
 
 
-.active-enabled {
+.active-enabled:not(:is(:is(.toggle-active, .tab-active, .active) .active-enabled)) {
   display: none !important;
+}
 
+.active-disabled:is(:is(.toggle-active, .tab-active, .active) .active-disabled) {
+  display: none !important;
 }
 
 .is-active-disabled:is(.toggle-active, .active) {
@@ -153,17 +156,6 @@ body {
   display: none;
 }
 
-.toggle-active,
-.tab-active,
-.active {
-  .active-disabled {
-    display: none !important;
-  }
-
-  .active-enabled {
-    display: flex !important;
-  }
-}
 
 .submenu {
   position: relative;
@@ -189,6 +181,14 @@ body {
       transform     : translateY(10px);
       pointer-events: none;
     }
+  }
+
+  &-icon {
+    transition: .2s ease;
+  }
+
+  &:not(.toggle-active) &-icon {
+    transform: rotateZ(180deg);
   }
 }
 

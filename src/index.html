@@ -206,8 +206,10 @@
     </div>
   </div>
 
-  <div class="mb-8 text-center sm:mb-10 title lg:mb-15" data-animation="fade-in-up">Информационные партнеры</div>
-  <div class="grid grid-cols-2 gap-4 mx-auto mb-20 sm:container md:grid-cols-5 lg:gap-5 ">
+  <div class="mb-8 text-center sm:mb-10 title lg:mb-15" data-animation="fade-in-up">
+    Информационные партнеры</div>
+  <div class="grid grid-cols-2 gap-4 mx-auto mb-20 sm:container md:grid-cols-5 lg:gap-5 " id="partners-items"
+    data-toggle-static>
     <div class="p-4 partners-item" data-animation="fade-in-up">
       <div class="ratio ratio-1/1">
         <img src="img/partners/thedeck.png" alt="" class="object-scale-down absolute-image">
@@ -233,10 +235,26 @@
         <img src="img/partners/vietfish.png" alt="" class="object-scale-down absolute-image">
       </div>
     </div>
+    <div class="p-4 partners-item active-enabled">
+      <div class="ratio ratio-1/1">
+        <img src="img/partners/balikhaber.png" alt="" class="object-scale-down absolute-image">
+      </div>
+    </div>
+    <div class="p-4 partners-item active-enabled">
+      <div class="ratio ratio-1/1">
+        <img src="img/partners/ilpeske.png" alt="" class="object-scale-down absolute-image">
+      </div>
+    </div>
+    <div class="p-4 partners-item active-enabled">
+      <div class="ratio ratio-1/1">
+        <img src="img/partners/vietfish.png" alt="" class="object-scale-down absolute-image">
+      </div>
+    </div>
 
   </div>
   <div data-animation="fade-in-up">
-    <button class="mx-auto rounded-full btn btn-gradient btn-contur">
+    <button class="mx-auto rounded-full btn btn-gradient btn-contur is-active-disabled"
+      data-toggle-link="partners-items">
       Все партнеры
       <svg class="ml-1 icon text-primary">
         <use xlink:href="img/icons.svg#to-right" />
@@ -317,7 +335,7 @@
             <div class="mt-6 text-lg font-bold uppercase lg:text-xl font-alt">
               ОРГАНИЗАТОРЫ:
             </div>
-            <div class="flex items-center flex-grow gap-8 mt-4 flex-wrap">
+            <div class="flex flex-wrap items-center flex-grow gap-8 mt-4">
               <img src="img/programm/federal.png" alt="">
               <img src="img/programm/vniro.png" alt="">
             </div>
