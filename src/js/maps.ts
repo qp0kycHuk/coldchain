@@ -17,7 +17,7 @@ function mapsInit() {
     return
   }
 
-  ymaps.load('https://api-maps.yandex.ru/2.1/?lang=ru_RU').then((maps: any) => {
+  ymaps.load('https://api-maps.yandex.ru/2.1/?lang=' + window.mapLocate).then((maps: any) => {
     const coords = window.coords
     const center = [coords[0], coords[1]]
 
@@ -53,6 +53,7 @@ function mapsInit() {
 
 interface CustomWindow extends Window {
   coords: number[]
+  mapLocate: string
 }
 declare let window: CustomWindow
 
