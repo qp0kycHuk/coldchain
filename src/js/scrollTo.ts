@@ -8,11 +8,11 @@ function clickHandler(event: MouseEvent) {
   if (!href) return
   if (href[0] != '#' || href == '#') return
 
-  event.preventDefault()
-
   const element = document.querySelector(href)
 
   if (!element) return
+
+  event.preventDefault()
   const offset = 45
   const bodyRect = document.body.getBoundingClientRect().top
   const elementRect = element.getBoundingClientRect().top
