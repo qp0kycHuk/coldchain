@@ -13,7 +13,7 @@ function clickHandler(event: MouseEvent) {
   if (!element) return
 
   event.preventDefault()
-  const offset = 45
+  const offset = 0
   const bodyRect = document.body.getBoundingClientRect().top
   const elementRect = element.getBoundingClientRect().top
   const elementPosition = elementRect - bodyRect
