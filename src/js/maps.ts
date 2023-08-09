@@ -23,10 +23,18 @@ function mapsInit() {
 
     // const placemarkSize = screen.width < 1200 ? 64 : 48
 
-    const map = new maps.Map('contact-map', {
-      center: center,
-      zoom: 16,
-    })
+    const map = new maps.Map(
+      'contact-map',
+      {
+        center: center,
+        zoom: 16,
+        controls: ['zoomControl'],
+        // behaviors: [],
+      },
+      {
+        suppressMapOpenBlock: true,
+      }
+    )
 
     const placemark = new maps.Placemark(
       coords,
@@ -39,13 +47,13 @@ function mapsInit() {
       }
     )
 
-    map.controls.remove('geolocationControl')
-    map.controls.remove('searchControl')
-    map.controls.remove('trafficControl')
-    map.controls.remove('typeSelector')
-    map.controls.remove('fullscreenControl')
-    map.controls.remove('zoomControl')
-    map.controls.remove('rulerControl')
+    // map.controls.remove('geolocationControl')
+    // map.controls.remove('searchControl')
+    // map.controls.remove('trafficControl')
+    // map.controls.remove('typeSelector')
+    // map.controls.remove('fullscreenControl')
+    // map.controls.remove('zoomControl')
+    // map.controls.remove('rulerControl')
     map.behaviors.disable(['scrollZoom'])
     map.geoObjects.add(placemark)
   })
