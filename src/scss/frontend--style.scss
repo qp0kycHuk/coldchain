@@ -335,14 +335,14 @@ body {
     opacity : 0.5;
 
     &-1 {
-      top      : 358px;
+      top      : calc(100% * 358 / 820);
       right    : calc(50% + 735px);
       width    : 94px;
       height   : 108px;
       transform: rotate(19deg);
 
       @media(max-width:$lg) {
-        top  : 400px;
+        top  : calc(100% * 400 / 680);
         right: calc(50% + 435px);
       }
 
@@ -357,14 +357,14 @@ body {
     }
 
     &-2 {
-      top      : 136px;
+      top      : calc(100% * 136 / 820);
       right    : calc(50% + 424px);
       width    : 176px;
       height   : 201px;
       transform: rotate(-18deg);
 
       @media(max-width:$lg) {
-        top  : 80px;
+        top  : calc(100% * 80 / 680);
         right: calc(50% + 384px);
       }
 
@@ -381,14 +381,14 @@ body {
     }
 
     &-3 {
-      top      : 246px;
+      top      : calc(100% * 246 / 820);
       left     : calc(50% + 409px);
       width    : 176px;
       height   : 201px;
       transform: rotate(-36deg);
 
       @media(max-width:$lg) {
-        top: 180px;
+        top: calc(100% * 180 / 680);
       }
 
       @media(max-width:$md) {
@@ -403,14 +403,14 @@ body {
     }
 
     &-4 {
-      top      : 363px;
+      top      : calc(100% * 363 / 820);
       left     : calc(50% + 757px);
       width    : 94px;
       height   : 107px;
       transform: rotate(39deg);
 
       @media(max-width:$lg) {
-        top : 500px;
+        top : calc(100% * 500 / 680);
         left: calc(50% + 357px);
       }
 
@@ -776,6 +776,7 @@ body {
   align-items    : center;
   justify-content: center;
   height         : 400px;
+  overflow       : hidden;
 
   @media(max-width:$lg) {
     height: 300px;
@@ -783,6 +784,17 @@ body {
 
   @media(max-width:$sm) {
     height: 200px;
+
+    .started-snowflake-3,
+    .started-snowflake-2 {
+      display: none;
+    }
+
+    .started-snowflake-4 {
+      top  : 20px;
+      right: -20px;
+      left : auto;
+    }
   }
 
   @media(max-width:$xs) {
