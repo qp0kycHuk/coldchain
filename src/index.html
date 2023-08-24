@@ -20,7 +20,7 @@
     <div class="started-logo">
       <img src="img/started-logo.png" alt="">
     </div>
-    <div class="font-medium leading-none lg:leading-none text-center uppercase my-7 sm:my-10 lg:text-lg lg:my-15 started-sign">
+    <div class="font-medium leading-none text-center uppercase lg:leading-none my-7 sm:my-10 lg:text-lg lg:my-15 started-sign">
       МЕЖДУНАРОДНАЯ КОНФЕРЕНЦИЯ <br> ПО НЕПРЕРЫВНОЙ ХОЛОДИЛЬНОЙ ЦЕПИ
     </div>
     <div class="leading-none started-date"> 28 СЕНТЯБРЯ 2023 </div>
@@ -152,58 +152,26 @@
   </div>
 
   <div class="mb-8 text-center sm:mb-10 title lg:mb-15" data-animation="fade-in-up">Партнеры мероприятия</div>
-  <div class="grid grid-cols-2 gap-4 mx-auto mb-20 sm:container md:grid-cols-5 lg:gap-5 max-lg:text-sm">
-    <div class="partners-item " data-animation="fade-in-up">
-      <div class="p-4 partners-item-background">
-        <div class="ratio ratio-[23/18] ">
-          <img src="img/partners/esg.png" alt="" class="object-scale-down absolute-image">
+  <div class="mx-auto mb-20 sm:container">
+    <div class="flex justify-center flex-wrap max-lg:text-sm -m-2 lg:-m-2.5">
+      <% for(let i = 0; i < 3; i++) { %>
+      <div class="w-1/2 md:w-1/5 p-2 lg:p-2.5">
+        <div class="partners-item " data-animation="fade-in-up">
+          <div class="p-4 partners-item-background">
+            <div class="ratio ratio-[23/18] ">
+              <img src="img/partners/esg.png" alt="" class="object-scale-down absolute-image">
+            </div>
+          </div>
+          <div class="py-5 text-center">
+            <div class="opacity-60">Генеральный партнер</div>
+          </div>
         </div>
       </div>
-      <div class="py-5 text-center">
-        <div class="opacity-60">Генеральный партнер</div>
-      </div>
-    </div>
-    <div class="partners-item " data-animation="fade-in-up">
-      <div class="p-4 partners-item-background">
-        <div class="ratio ratio-[23/18] ">
-          <img src="img/partners/sber.png" alt="" class="object-scale-down absolute-image">
-        </div>
-      </div>
-      <div class="py-5 text-center">
-        <div class="opacity-60">Банк-партнер</div>
-      </div>
-    </div>
-    <div class="partners-item " data-animation="fade-in-up">
-      <div class="p-4 partners-item-background">
-        <div class="ratio ratio-[23/18] ">
-          <img src="img/partners/pesceinrete.png" alt="" class="object-scale-down absolute-image">
-        </div>
-      </div>
-      <div class="py-5 text-center">
-        <div class="opacity-60">Бизнес-партнер</div>
-      </div>
-    </div>
-    <div class="partners-item " data-animation="fade-in-up">
-      <div class="p-4 partners-item-background">
-        <div class="ratio ratio-[23/18] ">
-          <img src="img/partners/vietfish.png" alt="" class="object-scale-down absolute-image">
-        </div>
-      </div>
-      <div class="py-5 text-center">
-        <div class="opacity-60">Официальный партнер</div>
-      </div>
-    </div>
-    <div class="partners-item " data-animation="fade-in-up">
-      <div class="p-4 partners-item-background">
-        <div class="ratio ratio-[23/18] ">
-          <img src="img/partners/thedeck.png" alt="" class="object-scale-down absolute-image">
-        </div>
-      </div>
-      <div class="py-5 text-center">
-        <div class="opacity-60">Официальный партнер</div>
-      </div>
+
+      <% } %>
     </div>
   </div>
+
 
   <div class="mb-8 text-center sm:mb-10 title lg:mb-15" data-animation="fade-in-up">
     Информационные партнеры</div>
