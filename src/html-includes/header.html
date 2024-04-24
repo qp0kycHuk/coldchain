@@ -45,10 +45,23 @@
             </a>
           </div>
         </div>
-        <a href="/#program" data-scroll="#program" class="relative btn btn-text btn-gray hover:underline max-lg:hidden">
-          <div class="absolute -inset-6"></div>
-          <span class="opacity-80">Деловая программа</span>
-        </a>
+        <div class="submenu max-lg:hidden" data-toggle-cover>
+          <button class="relative btn btn-text btn-gray hover:underline " data-toggle-link>
+            <div class="absolute -inset-6"></div>
+            <span class="opacity-80">Деловая программа</span>
+            <svg class="ml-2 text-xs icon submenu-icon">
+              <use xlink:href="img/icons.svg#to-top" />
+            </svg>
+          </button>
+          <div class="space-y-3 submenu-list" data-toggle-content>
+            <a href="/#program" data-scroll="#program" class="justify-start gap-2 btn btn-text hover:underline">
+              <span class="font-medium">2023</span>
+            </a>
+            <a href="/#program" data-scroll="#program" class="justify-start gap-2 btn btn-text hover:underline">
+              <span class="font-medium">2022</span>
+            </a>
+          </div>
+        </div>
         <button class="relative btn btn-text btn-gray hover:underline max-lg:hidden">
           <div class="absolute -inset-6"></div>
           <span class="opacity-80">Регистрация</span>

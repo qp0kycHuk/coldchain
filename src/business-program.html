@@ -1,0 +1,150 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+<section class="relative page-top">
+  <div class="absolute inset-0 page-top-background">
+    <img src="img/page-top.jpg" alt="" class="object-cover absolute-image">
+  </div>
+  <div class="page-top-content">
+    <div class="title">Деловая программа</div>
+  </div>
+</section>
+
+<% var dates = [
+  {
+    tab: 'date-17',
+    title: '17 октября (День 1)'
+  },
+  {
+    tab: 'date-18',
+    title: '18 октября (День 2)'
+  },
+  {
+    tab: 'date-19',
+    title: '19 октября (День 3)'
+  },
+  {
+    tab: 'date-20',
+    title: '20 октября (День 4)'
+  }
+] %>
+
+<section class="business-program section-padding bg-l3 overflow-hidden">
+  <div class="flex items-center mb-5">
+    <div class="text-base font-semibold mr-6">Год проведения</div>
+    <div class="submenu" data-toggle-cover>
+      <button class="btn btn-gradient h-10 btn-contur rounded-lg px-4 font-bold" data-toggle-link>
+        <span class="text-gradient mr-2">2023</span>
+        <svg class="icon text-primary">
+          <use xlink:href="img/icons.svg#to-right" />
+        </svg>
+      </button>
+      <div class="space-y-3 z-1 submenu-list" data-toggle-content>
+        <a href="/" class="justify-start gap-2 btn btn-text hover:underline">
+          <span class="font-medium">2023</span>
+        </a>
+        <a href="/" class="justify-start gap-2 btn btn-text hover:underline">
+          <span class="font-medium">2022</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div data-tab-cover>
+    <div class="flex items-center md:justify-between border-b border-solid border-black border-opacity-10 mb-6 md:mb-10 overflow-auto md:overflow-hidden -mx-4 md:mx-0">
+      <% for(let i = 0; i < dates.length; i++) { %>
+      <button class="business-program__tab tabs-item btn btn-black btn-text sm:text-xl px-3 sm:px-6 py-3 sm:py-5 min-w-max md:flex-grow" data-tab-link="<%= dates[i].tab %>"><%= dates[i].title %></button>
+      <% } %>
+    </div>
+    <div class="block relative">
+      <% for(let i = 0; i < dates.length; i++) { %>
+      <div class="tab-content" data-tab-content="<%= dates[i].tab %>">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5 mb-6 md:mb-10">
+          <div class="title lowercase"><%= dates[i].title %></div>
+          <a class="btn btn-gradient btn-contur rounded-full w-max" href="" download="">Скачать программу</a>
+        </div>
+        <div class="flex flex-col gap-4 md:gap-6">
+          <div class="py-5 px-4 md:px-6 flex flex-col md:flex-row md:justify-between gap-7 md:gap-20 bg-l3 rounded-2xl shadow-sm">
+            <div class="md:min-w-36">
+              <div class="text-xl">9:00 - 10:00</div>
+            </div>
+            <div class="w-full">
+              <div class="text-lg lg:text-1.5xl uppercase font-bold font-alt leading-normal text-gradient w-max">РЕГИСТРАЦИЯ</div>
+            </div>
+          </div>
+          <div class="py-5 px-4 md:px-6 flex flex-col md:flex-row md:justify-between gap-7 md:gap-20 bg-l3 rounded-2xl shadow-sm">
+            <div class="md:min-w-36">
+              <div class="text-xl">9:00 - 10:00</div>
+            </div>
+            <div class="w-full">
+              <div class="text-lg lg:text-1.5xl uppercase font-bold font-alt leading-normal">
+                ПЛЕНАРНАЯ СЕССИЯ «РЫНОК СКОРОПОРТЯЩЕЙСЯ ПРОДУКЦИИ: ТРЕНДЫ, ВЫЗОВЫ И ТРЕБОВАНИЯ СО СТОРОНЫ ЭКОНОМИКИ».
+              </div>
+              <div class="text-base font-bold mt-7">Ключевые вопросы</div>
+              <ul class="mt-5 opacity-80 list-disc list-inside">
+                <li>
+                  Роль обеспечения непрерывной холодильной цепи в глобальной продовольственной системе для достижения целей ООН в области устойчивого развития
+                </li>
+                <li>
+                  Поиск решений для обеспечения НХЦ в условиях международной нестабильности
+                </li>
+                <li>
+                  Инвестиции в развитие рыбной отрасли
+                </li>
+                <li>
+                  Роль консолидации различных видов транспорта для обеспечения непрерывной холодильной цепи
+                </li>
+                <li>
+                  Государственная поддержка экспортёров продукции АПК России в страны АТР И ЮВА
+                </li>
+                <li>
+                  Динамика импорта скоропорта в Россию и развитие агробизнеса на маркетплейсах
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="py-5 px-4 md:px-6 flex flex-col md:flex-row md:justify-between gap-7 md:gap-20 bg-l3 rounded-2xl shadow-sm">
+            <div class="md:min-w-36">
+              <div class="text-xl">9:00 - 10:00</div>
+            </div>
+            <div class="w-full">
+              <div class="text-lg lg:text-1.5xl uppercase font-bold font-alt leading-normal text-gradient w-max">ПЕРЕРЫВ</div>
+            </div>
+          </div>
+          <div class="py-5 px-4 md:px-6 flex flex-col md:flex-row md:justify-between gap-7 md:gap-20 bg-l3 rounded-2xl shadow-sm">
+            <div class="md:min-w-36">
+              <div class="text-xl">9:00 - 10:00</div>
+            </div>
+            <div class="w-full">
+              <div class="text-lg lg:text-1.5xl uppercase font-bold font-alt leading-normal">
+                ПРАКТИЧЕСКАЯ СЕССИЯ «ИНДУСТРИЯ ХОЛОДА И ИТ-ТЕХНОЛОГИИ»
+              </div>
+              <div class="text-base font-bold mt-7">Ключевые вопросы</div>
+              <ul class="mt-5 opacity-80 list-disc list-inside">
+                <li>
+                  Роль обеспечения непрерывной холодильной цепи в глобальной продовольственной системе для достижения целей ООН в области устойчивого развития
+                </li>
+                <li>
+                  Поиск решений для обеспечения НХЦ в условиях международной нестабильности
+                </li>
+                <li>
+                  Инвестиции в развитие рыбной отрасли
+                </li>
+                <li>
+                  Роль консолидации различных видов транспорта для обеспечения непрерывной холодильной цепи
+                </li>
+                <li>
+                  Государственная поддержка экспортёров продукции АПК России в страны АТР И ЮВА
+                </li>
+                <li>
+                  Динамика импорта скоропорта в Россию и развитие агробизнеса на маркетплейсах
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>

@@ -914,3 +914,34 @@ body.loaded .loader {
   opacity       : 0;
   pointer-events: none;
 }
+
+.text-gradient {
+  background             : linear-gradient(96.45deg, #0081AA 18.85%, #711CC6 100%);
+  background-clip        : text;
+  -webkit-text-fill-color: transparent;
+}
+
+.business-program {
+  &__tab::after {
+    content      : '';
+    position     : absolute;
+    right        : 0;
+    bottom       : 0;
+    left         : 0;
+    width        : 100%;
+    height       : 1px;
+    background   : linear-gradient(96.45deg, #0081AA 18.85%, #711CC6 100%);
+    border-radius: 8px;
+    visibility   : hidden;
+    opacity      : 0;
+  }
+
+  &__tab.tab-active {
+    font-weight: 700;
+
+    &::after {
+      visibility: visible;
+      opacity   : 1;
+    }
+  }
+}

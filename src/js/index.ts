@@ -4,6 +4,7 @@ import maps from './maps'
 import phonemask from './phonemask/phonemask'
 import scrollTo from './scrollTo'
 import toggle from 'npm-kit-toggle'
+import tab from 'npm-kit-tab'
 import ripple from '@qpokychuk/ripple'
 // import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade } from 'swiper'
 
@@ -24,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => loadHandler())
 function loadHandler() {
   scrollTo.init()
   toggle.init()
+  tab.init()
   ripple.init()
   fancybox.init()
   animations.init()
