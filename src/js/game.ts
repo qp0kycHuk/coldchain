@@ -8,6 +8,9 @@ const init = (): void => {
   const icon = game.querySelector('*[data-game-icon]') as HTMLImageElement
   const result = game.querySelector('*[data-game-result]') as HTMLSpanElement
   const button = game.querySelector('*[data-game-button]') as HTMLButtonElement
+  const victory = String(result.dataset.victory)
+  const loss = String(result.dataset.loss)
+  const draw = String(result.dataset.draw)
   const cells: HTMLButtonElement[] = []
   let player = 'X'
   let over = false
@@ -58,10 +61,10 @@ const init = (): void => {
       checkCell(cell)
 
       if (checkWin(player)) {
-        checkResult('img/emoji.svg', 'Вы проиграли')
+        checkResult('img/emoji.svg', loss)
         over = true
       } else if (checkDraw()) {
-        checkResult('img/like.svg', 'Ничья')
+        checkResult('img/like.svg', draw)
         over = true
       } else {
         player = 'X'
@@ -82,10 +85,10 @@ const init = (): void => {
         checkCell(cell)
 
         if (checkWin(player)) {
-          checkResult('img/confetti.svg', 'Вы победили!')
+          checkResult('img/confetti.svg', victory)
           over = true
         } else if (checkDraw()) {
-          checkResult('img/like.svg', 'Ничья')
+          checkResult('img/like.svg', draw)
           over = true
         } else {
           player = '0'
