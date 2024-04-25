@@ -1,4 +1,4 @@
-<%= _.template(require('./html-includes/header.html').default)() %>
+<%= _.template(require('./html-includes/header.html').default)({status: true}) %>
 
 <section class="relative page-top">
   <div class="absolute inset-0 page-top-background">
@@ -169,4 +169,4 @@
   </form>
 </section>
 
-<%= _.template(require('./html-includes/footer.html').default)() %>
+<%= _.template(require('./html-includes/footer.html').default)({status: true}) %>

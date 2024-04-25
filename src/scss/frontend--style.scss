@@ -419,6 +419,15 @@ body {
       }
     }
   }
+
+  &--game {
+    height    : auto;
+    min-height: 880px;
+
+    @media(max-width:$sm) {
+      min-height: 500px;
+    }
+  }
 }
 
 .about {

@@ -19,15 +19,18 @@
     <div class="loader"> </div>
 
     <header class="py-2 sm:py-4 header bg-l3">
+      <% if (status) { %>
       <button class="mr-6 btn btn-text lg:hidden" data-toggle-link="menu">
         <svg class="text-2xl icon opacity-60">
           <use xlink:href="img/icons.svg#menu" />
         </svg>
       </button>
+      <% } %>
       <a href="/" class="block w-24 sm:w-40 header-logo">
         <img src="img/logo.png" alt="">
       </a>
-      <div class="flex gap-12 header-nav max-lg:ml-auto max-lg:mr-6">
+      <div class="flex gap-12 header-nav <%= status ? 'max-lg:ml-auto max-lg:mr-6' : 'ml-auto mr-6' %>">
+        <% if (status) { %>
         <div class="submenu max-lg:hidden" data-toggle-cover>
           <button class="relative btn btn-text btn-gray hover:underline " data-toggle-link>
             <div class="absolute -inset-6"></div>
@@ -70,6 +73,7 @@
           <div class="absolute -inset-6"></div>
           <span class="opacity-80">Контакты</span>
         </button>
+        <% } %>
         <div class="submenu" data-toggle-cover>
           <button class="btn btn-text" data-toggle-link>
             <img src="img/rus.png" alt="" class="w-6 border rounded-full border-gray border-opacity-10">
@@ -100,6 +104,7 @@
       </div>
     </header>
 
+    <% if (status) { %>
     <div class="menu" id="menu">
       <header class="py-2 menu-header sm:py-4 header bg-l3">
         <button class="mr-6 btn btn-text" data-toggle-link="menu">
@@ -169,3 +174,4 @@
       </div>
     </div>
     <div class="menu-shadow" data-toggle-link="menu"></div>
+    <% } %>

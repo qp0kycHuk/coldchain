@@ -6,6 +6,7 @@ import scrollTo from './scrollTo'
 import toggle from 'npm-kit-toggle'
 import tab from 'npm-kit-tab'
 import ripple from '@qpokychuk/ripple'
+import game from './game'
 // import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade } from 'swiper'
 
 import '../scss/index.scss'
@@ -27,6 +28,7 @@ function loadHandler() {
   toggle.init()
   tab.init()
   ripple.init()
+  game.init()
   fancybox.init()
   animations.init()
   maps.init()

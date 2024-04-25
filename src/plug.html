@@ -1,0 +1,42 @@
+<%= _.template(require('./html-includes/header.html').default)({status: false}) %>
+
+<section class="started started--game">
+  <div class="absolute inset-0 started-background">
+    <picture>
+      <source srcset="img/started-background.webp" type="image/webp">
+      <img src="img/started-background.jpg" alt="" class="absolute-image">
+    </picture>
+  </div>
+  <div class="started-circle">
+    <img src="img/circle.png" alt="">
+  </div>
+
+  <img src="img/snowflake.svg" alt="" class="started-snowflake started-snowflake-1">
+  <img src="img/snowflake.svg" alt="" class="started-snowflake started-snowflake-2">
+  <img src="img/snowflake.svg" alt="" class="started-snowflake started-snowflake-3">
+  <img src="img/snowflake.svg" alt="" class="started-snowflake started-snowflake-4">
+
+  <div class="started-content">
+    <div class="mb-4 text-2xl text-center md:text-4xl font-alt">Мы загружаем обновления, чтобы стать лучше</div>
+    <div class="mb-5 text-base font-semibold text-center md:mb-9">Приносим извинения, скоро всё заработает</div>
+    <div class="w-full sm:max-w-[500px]" data-game>
+      <div class="relative overflow-hidden rounded-3xl">
+        <img class="absolute inset-0 object-cover w-full h-full" src="img/game-bg.jpg" alt="">
+        <div class="relative px-4 py-6 text-white md:px-6">
+          <div class="mb-6 text-base font-medium text-center">А пока давайте сыграем. Ваш ход =)</div>
+          <div class="grid grid-cols-3 border border-white border-solid" data-game-content></div>
+        </div>
+      </div>
+      <div class="items-center justify-between hidden gap-5 pb-5 mt-5 md:pb-10 md:mt-10" data-game-bottom>
+        <div class="flex items-center">
+          <img class="mr-2 text-2xl md:text-3xl icon" src="" alt="" data-game-icon="/">
+          <span class="text-base font-medium md:text-xl" data-game-result></span>
+        </div>
+        <button class="rounded-full btn btn-gradient btn-contur" data-game-button>Начать заново</button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)({status: false}) %>
