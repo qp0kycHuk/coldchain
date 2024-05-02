@@ -7,19 +7,21 @@ import toggle from 'npm-kit-toggle'
 import tab from 'npm-kit-tab'
 import ripple from '@qpokychuk/ripple'
 import game from './game'
-// import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade } from 'swiper'
+import copyLink from './copy-link'
+import currentHash from './current-hash'
+import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade } from 'swiper'
 
 import '../scss/index.scss'
 
-// Swiper.use([Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade])
-// Swiper.defaults.touchStartPreventDefault = false
-// window.Swiper = Swiper
+declare global {
+  interface Window {
+    Swiper: typeof Swiper
+  }
+}
 
-// interface CustomWindow extends Window {
-// Swiper: typeof Swiper
-// }
-
-// declare let window: CustomWindow
+Swiper.use([Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade])
+Swiper.defaults.touchStartPreventDefault = false
+window.Swiper = Swiper
 
 window.addEventListener('DOMContentLoaded', () => loadHandler())
 
@@ -29,6 +31,8 @@ function loadHandler() {
   tab.init()
   ripple.init()
   game.init()
+  copyLink.init()
+  currentHash.init()
   fancybox.init()
   animations.init()
   maps.init()
