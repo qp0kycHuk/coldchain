@@ -953,4 +953,20 @@ body.loaded .loader {
       opacity   : 1;
     }
   }
+
+  &__cover.toggle-active &__text span:first-child {
+    display: none;
+  }
+
+  &__cover.toggle-active &__arrow {
+    transform: rotate(-90deg);
+  }
+
+  &__cover:not(.toggle-active) &__text span:last-child {
+    display: none;
+  }
+
+  &__cover:not(.toggle-active) &__content {
+    display: none;
+  }
 }

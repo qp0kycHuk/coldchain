@@ -89,7 +89,7 @@
           </div>
         </div>
         <div class="flex flex-col gap-4 md:gap-6">
-          <div class="flex flex-col px-4 py-5 shadow-sm md:px-6 md:flex-row md:justify-between gap-7 md:gap-20 bg-l3 rounded-2xl">
+          <div class="flex flex-col py-5 shadow-sm sm:px-4 md:px-6 md:flex-row md:justify-between gap-7 md:gap-20 bg-l3 rounded-2xl">
             <div class="md:min-w-52">
               <div class="text-xl">9:00 - 10:00</div>
             </div>
@@ -97,7 +97,7 @@
               <div class="text-lg lg:text-1.5xl uppercase font-bold font-alt leading-normal text-gradient w-max">РЕГИСТРАЦИЯ</div>
             </div>
           </div>
-          <div class="flex flex-col px-4 py-5 shadow-sm md:px-6 md:flex-row md:justify-between gap-7 md:gap-20 bg-l3 rounded-2xl">
+          <div class="flex flex-col py-5 shadow-sm sm:px-4 md:px-6 md:flex-row md:justify-between gap-7 md:gap-20 bg-l3 rounded-2xl">
             <div class="md:min-w-52">
               <div class="text-xl">9:00 - 10:00</div>
             </div>
@@ -128,7 +128,7 @@
               </ul>
             </div>
           </div>
-          <div class="flex flex-col px-4 py-5 shadow-sm md:px-6 md:flex-row md:justify-between gap-7 md:gap-20 bg-l3 rounded-2xl">
+          <div class="flex flex-col py-5 shadow-sm sm:px-4 md:px-6 md:flex-row md:justify-between gap-7 md:gap-20 bg-l3 rounded-2xl">
             <div class="md:min-w-52">
               <div class="text-xl">9:00 - 10:00</div>
             </div>
@@ -136,7 +136,7 @@
               <div class="text-lg lg:text-1.5xl uppercase font-bold font-alt leading-normal text-gradient w-max">ПЕРЕРЫВ</div>
             </div>
           </div>
-          <div class="flex flex-col px-4 py-5 shadow-sm md:px-6 md:flex-row md:justify-between gap-7 md:gap-20 bg-l3 rounded-2xl" id="<%= dates[i].tab %>">
+          <div class="flex flex-col py-5 shadow-sm sm:px-4 md:px-6 md:flex-row md:justify-between gap-7 md:gap-20 bg-l3 rounded-2xl" id="<%= dates[i].tab %>">
             <div class="md:min-w-52">
               <div class="text-xl">9:00 - 10:00</div>
               <div class="mt-4 text-base opacity-60">Конференц зал</div>
@@ -172,35 +172,130 @@
             </div>
             <div class="w-full">
               <div class="text-lg lg:text-1.5xl uppercase font-bold font-alt leading-normal">
-                ПРАКТИЧЕСКАЯ СЕССИЯ «ИНДУСТРИЯ ХОЛОДА И ИТ-ТЕХНОЛОГИИ»
+                КЕЙС-СЕССИЯ «БЕСШОВНАЯ ТЕМПЕРАТУРНАЯ ЛОГИСТИКА: МИРОВОЙ ОПЫТ И ПРАКТИКА В РОССИИ».
               </div>
-              <div class="text-base font-bold mt-7">Ключевые вопросы</div>
+              <div class="text-base font-bold mt-7">Презентации транспортных продуктов:</div>
               <ul class="mt-5 list-disc list-inside opacity-80">
                 <li>
-                  Роль обеспечения непрерывной холодильной цепи в глобальной продовольственной системе для достижения целей ООН в области устойчивого развития
+                  Международная партнёрская сеть операторов холодильной цепи
                 </li>
                 <li>
-                  Поиск решений для обеспечения НХЦ в условиях международной нестабильности
+                  Мультимодальные сервисы по перевозке скоропортящейся продукции в международном сообщении
                 </li>
                 <li>
-                  Инвестиции в развитие рыбной отрасли
+                  О развитии перевозок рыбопромысловой продукции при перевозках из российских дальневосточных портов в порты АТР и ЮВА
                 </li>
                 <li>
-                  Роль консолидации различных видов транспорта для обеспечения непрерывной холодильной цепи
+                  Взаимодействие с фруктовыми трейдерами
                 </li>
                 <li>
-                  Государственная поддержка экспортёров продукции АПК России в страны АТР И ЮВА
+                  Рынок рефрижераторных морских перевозок
                 </li>
                 <li>
-                  Динамика импорта скоропорта в Россию и развитие агробизнеса на маркетплейсах
+                  Новые логистические цепочки: от производителя к потребителю
                 </li>
               </ul>
+              <div class="business-program__cover mt-7 md:mt-12" data-toggle-cover>
+                <div class="business-program__content" data-toggle-content>
+                  <div class="pb-8">
+                    <div class="text-lg lg:text-1.5xl uppercase font-bold font-alt leading-normal">СПИКЕРЫ</div>
+                    <div class="grid grid-cols-1 mt-5 sm:grid-cols-2 gap-y-5 gap-x-16">
+                      <% for (var j = 0; j < 4; j++) { %>
+                      <div class="flex items-center">
+                        <div class="relative mr-3 overflow-hidden rounded-full w-14 min-w-14 h-14 bg-grey">
+                          <img class="absolute inset-0 object-cover w-full h-full" src="img/test.jpg" alt="">
+                        </div>
+                        <div class="flex flex-col">
+                          <div class="text-base font-semibold leading-1">Дмитрий Патрушев</div>
+                          <div class="mt-1 text-xs leading-3 opacity-60">Министр сельского хозяйства Российской Федерации</div>
+                        </div>
+                      </div>
+                      <% } %>
+                    </div>
+                    <div class="text-lg lg:text-1.5xl font-bold font-alt leading-normal mt-8">Модератор</div>
+                    <div class="grid grid-cols-1 mt-5 sm:grid-cols-2 gap-y-5 gap-x-16">
+                      <% for (var j = 0; j < 4; j++) { %>
+                      <div class="flex items-center">
+                        <div class="relative mr-3 overflow-hidden rounded-full w-14 min-w-14 h-14 bg-grey">
+                          <img class="absolute inset-0 object-cover w-full h-full" src="img/test.jpg" alt="">
+                        </div>
+                        <div class="flex flex-col">
+                          <div class="text-base font-semibold leading-1">Дмитрий Патрушев</div>
+                          <div class="mt-1 text-xs leading-3 opacity-60">Министр сельского хозяйства Российской Федерации</div>
+                        </div>
+                      </div>
+                      <% } %>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center cursor-pointer" data-toggle-link>
+                  <div class="flex mr-1 business-program__text">
+                    <span class="text-base font-bold text-gradient">Показать</span>
+                    <span class="text-base font-bold text-gradient">Скрыть</span>
+                  </div>
+                  <svg class="duration-200 business-program__arrow icon text-primary">
+                    <use xlink:href="img/icons.svg#to-right" />
+                  </svg>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 gap-5 mt-8 md:grid-cols-2">
+                <div class="flex flex-col">
+                  <div class="text-lg lg:text-1.5xl font-bold font-alt leading-normal">Модератор</div>
+                  <div class="flex items-center gap-4 px-4 mt-4 -mx-4 overflow-auto md:flex-wrap md:px-4 md:mx-0">
+                    <img class="w-max max-h-[90px]" src="img/programm/federal.png" alt="">
+                    <img class="w-max max-w-[200px]" src="img/programm/vniro.png" alt="">
+                  </div>
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-lg lg:text-1.5xl font-bold font-alt leading-normal">Модератор</div>
+                  <div class="flex items-center gap-4 px-4 mt-4 -mx-4 overflow-auto md:flex-wrap md:px-4 md:mx-0">
+                    <img class="w-max max-h-[65px]" src="img/programm/federal.png" alt="">
+                    <img class="w-max max-w-[140px]" src="img/programm/vniro.png" alt="">
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <% } %>
     </div>
+  </div>
+  <div class="flex flex-col gap-2 mt-8">
+    <div class="flex items-center">
+      <div class="flex items-center justify-center w-8 h-8 rounded-lg min-w-8 bg-grey">
+        <svg class="text-2xl text-primary icon">
+          <use xlink:href="img/icons.svg#snowflake" />
+        </svg>
+      </div>
+      <div class="ml-2 text-base font-normal">Главное событие</div>
+    </div>
+    <div class="flex items-center">
+      <div class="flex items-center justify-center w-8 h-8 rounded-lg min-w-8 bg-grey">
+        <svg class="text-2xl icon">
+          <use xlink:href="img/icons.svg#headphones" />
+        </svg>
+      </div>
+      <div class="ml-2 text-base font-normal">Мероприятия с синхронным переводом</div>
+    </div>
+  </div>
+  <div class="mt-10 md:mt-20 mb-7 lg:mb-10 text-2.5xl font-semibold font-alt">Контактные лица</div>
+  <div class="grid gap-5 md:grid-cols-2 team-items lg:gap-7">
+    <% for(let i = 0; i < 4; i++) { %>
+    <div class="team-item">
+      <div class="relative flex-shrink-0 w-20 h-20 xs:w-32 xs:h-32 sm:w-40 sm:h-40 team-item-image">
+        <img src="img/test.jpg" alt="" class="object-cover absolute-image" loading="lazy">
+      </div>
+      <div>
+        <div class="xs:text-1.5xl sm:text-2.5xl font-alt font-semibold">Иван Иванов</div>
+        <div class="sm:mt-2 max-xs:text-sm">Координатор</div>
+        <a href="javascript:;" class="flex items-center gap-2 mt-2 xs:mt-4 xs:gap-3">
+          <img src="img/gradient-email.svg" alt="">
+          <span class="max-xs:text-sm">coldchain@rusfishexpo.com</span>
+        </a>
+      </div>
+    </div>
+    <% } %>
   </div>
 </section>
 
