@@ -970,3 +970,27 @@ body.loaded .loader {
     display: none;
   }
 }
+
+.materials-item {
+  background   : #fff;
+  border-radius: 16px;
+  box-shadow   : 0 1px 3px 0 rgba(32, 41, 76, 0.1);
+
+  &-letter {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    flex-shrink    : 0;
+    width          : 42px;
+    height         : 24px;
+    background     : linear-gradient(96.45deg, #0081AA 18.85%, #711CC6 100%),
+      radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 73.05%);
+
+    border-radius: 8px;
+
+    font-family: var(--font-alt);
+    font-size  : 12px;
+    color      : #fff;
+
+  }
+}

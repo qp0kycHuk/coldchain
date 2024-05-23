@@ -1,0 +1,171 @@
+<%= _.template(require('./html-includes/header.html').default)({status: true}) %>
+
+<section class="relative page-top">
+  <div class="absolute inset-0 page-top-background">
+    <img src="img/page-top.jpg" alt="" class="object-cover absolute-image">
+  </div>
+  <div class="page-top-content">
+    <div class="title">Деловая программа</div>
+  </div>
+</section>
+
+<% var dates = [
+  {
+    tab: 'date-17',
+    title: '17 октября (День 1)'
+  },
+  {
+    tab: 'date-18',
+    title: '18 октября (День 2)'
+  },
+  {
+    tab: 'date-19',
+    title: '19 октября (День 3)'
+  },
+  {
+    tab: 'date-20',
+    title: '20 октября (День 4)'
+  },
+  {
+    tab: 'date-21',
+    title: '21 октября (День 5)'
+  },
+]; %>
+
+<section class="overflow-hidden business-program section-padding bg-l3">
+  <div class="flex items-center mb-5">
+    <div class="mr-6 text-base font-semibold">Год проведения</div>
+    <div class="submenu" data-toggle-cover>
+      <button class="h-10 px-4 font-bold rounded-lg btn btn-gradient btn-contur" data-toggle-link>
+        <span class="mr-2 text-gradient">2023</span>
+        <svg class="icon text-primary">
+          <use xlink:href="img/icons.svg#to-right" />
+        </svg>
+      </button>
+      <div class="space-y-3 z-1 submenu-list" data-toggle-content>
+        <a href="/" class="justify-start gap-2 btn btn-text hover:underline">
+          <span class="font-medium">2023</span>
+        </a>
+        <a href="/" class="justify-start gap-2 btn btn-text hover:underline">
+          <span class="font-medium">2022</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div data-tab-cover data-hash-cover>
+    <div class="relative mb-6 border-b border-black border-solid business-program-slider border-opacity-10 md:mb-10">
+      <div class="-mx-4 swiper md:mx-0">
+        <div class="swiper-wrapper">
+          <% for(let i = 0; i < dates.length; i++) { %>
+          <div class="w-auto swiper-slide">
+            <button class="px-3 py-3 mx-auto business-program__tab tabs-item btn btn-black btn-text sm:text-xl sm:px-6 sm:py-5" data-tab-link="<%= dates[i].tab %>"><%= dates[i].title %></button>
+          </div>
+          <% } %>
+        </div>
+      </div>
+      <div class="absolute hidden -translate-y-1/2 top-1/2 -left-5 lg:-left-14 lg:block">
+        <button class="w-12 h-12 p-0 text-black rounded-full shadow-md swiper-button-prev btn btn-white">
+          <svg class="rotate-180 icon">
+            <use xlink:href="img/icons.svg#to-right" />
+          </svg>
+        </button>
+      </div>
+      <div class="absolute hidden -translate-y-1/2 z-1 top-1/2 -right-5 lg:-right-14 lg:block">
+        <button class="w-12 h-12 p-0 text-black rounded-full shadow-md swiper-button-next btn btn-white">
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#to-right" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="relative block">
+      <% for(let i = 0; i < dates.length; i++) { %>
+      <div class="tab-content" data-tab-content="<%= dates[i].tab %>">
+        <div class="flex flex-col gap-5 mb-6 md:flex-row md:items-center md:justify-between md:mb-10">
+          <div class="lowercase title"><%= dates[i].title %></div>
+        </div>
+        <div class="flex flex-col gap-5">
+          <% for(let i = 0; i < 3; i++) { %>
+          <div class="materials-item group overflow-hidden" data-toggle-cover>
+            <div class="flex items-center gap-3 p-3 sm:p-6 cursor-pointer hover:bg-gray/5" data-toggle-link>
+              <div class="sm:text-1.5xl font-bold font-alt">Официальная церемония открытия и экскурсия по выставке</div>
+              <svg class="icon text-xl ml-auto group-[.toggle-active]:-rotate-90 transition">
+                <use xlink:href="img/icons.svg#to-right" />
+              </svg>
+            </div>
+            <div class="toggle-active" data-toggle-content data-toggle-height data-toggle-static>
+              <div class="border-t w-full opacity-10"></div>
+              <div class="p-3 sm:p-6">
+                <div class="flex flex-col gap-3">
+                  <a href="https://sun9-8.userapi.com/impg/f5uvrJCYZbifmhdK9FzrSZdC1pmz54sYeykNow/-IuSye44J10.jpg?size=500x369&quality=95&sign=607ef89d46f702c53ba4ecf78cfb1f87&type=album" target="_blank" class="flex items-center gap-3">
+                    <div class="materials-item-letter">RUS</div>
+                    <div class="underline max-sm:text-sm">
+                      Альфред Тулиниус. Будущее рыболовного флота
+                    </div>
+                  </a>
+                  <a href="https://sun9-8.userapi.com/impg/f5uvrJCYZbifmhdK9FzrSZdC1pmz54sYeykNow/-IuSye44J10.jpg?size=500x369&quality=95&sign=607ef89d46f702c53ba4ecf78cfb1f87&type=album" target="_blank" class="flex items-center gap-3">
+                    <div class="materials-item-letter">RUS</div>
+                    <div class="underline max-sm:text-sm">
+                      Олег Бадера. Автоматизация сбора, обработки, хранения материалов исследований водных биологических ресурсов с использованием
+                      цифровых технологий и искусственного интеллекта
+                    </div>
+                  </a>
+                </div>
+                <div class="flex mt-8">
+                  <a class="rounded-full btn btn-gradient btn-fill max-xs:w-full" href="https://www.youtube.com/watch?v=zUpGctag7po" target="_blank">
+                    Смотреть видео
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+
+  <div class="mt-10 md:mt-20 mb-7 lg:mb-10 text-2.5xl font-semibold font-alt">Контактные лица</div>
+  <div class="grid gap-5 md:grid-cols-2 team-items lg:gap-7">
+    <% for(let i = 0; i < 4; i++) { %>
+    <div class="team-item">
+      <div class="relative flex-shrink-0 w-20 h-20 xs:w-32 xs:h-32 sm:w-40 sm:h-40 team-item-image">
+        <img src="img/test.jpg" alt="" class="object-cover absolute-image" loading="lazy">
+      </div>
+      <div>
+        <div class="xs:text-1.5xl sm:text-2.5xl font-alt font-semibold">Иван Иванов</div>
+        <div class="sm:mt-2 max-xs:text-sm">Координатор</div>
+        <a href="javascript:;" class="flex items-center gap-2 mt-2 xs:mt-4 xs:gap-3">
+          <img src="img/gradient-email.svg" alt="">
+          <span class="max-xs:text-sm">coldchain@rusfishexpo.com</span>
+        </a>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</section>
+
+<script>
+  new window.Swiper('.business-program-slider .swiper', {
+    navigation: {
+      prevEl: '.business-program-slider .swiper-button-prev',
+      nextEl: '.business-program-slider .swiper-button-next',
+    },
+    slidesPerView: 'auto',
+    slidesPerGroup: 1,
+    spaceBetween: 16,
+    grabCursor: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      1021: {
+        slidesPerView: 3.5,
+      },
+      1365: {
+        slidesPerView: 4,
+      },
+    },
+  })
+</script>
+
+<%= _.template(require('./html-includes/footer.html').default)({status: true}) %>
