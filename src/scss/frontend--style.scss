@@ -1049,3 +1049,27 @@ body.loaded .loader {
     pointer-events: none;
   }
 }
+
+.news-detail-content {
+  color: rgba(0, 0, 0, 0.8);
+
+  ul {
+    padding-left: 20px;
+    list-style  : disc;
+  }
+
+  ol {
+    list-style  : decimal;
+    padding-left: 20px;
+  }
+
+  &>*+* {
+    margin-top: 24px;
+  }
+
+  img {
+    border-radius: 32px;
+  }
+
+
+}
