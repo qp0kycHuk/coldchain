@@ -1,0 +1,137 @@
+<%= _.template(require('./html-includes/header.html').default)({status: true}) %>
+
+<section class="relative page-top">
+  <div class="absolute inset-0 page-top-background">
+    <img src="img/page-top.jpg" alt="" class="object-cover absolute-image">
+  </div>
+  <div class="page-top-content">
+    <div class="title">НОВОСТИ</div>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="flex mb-12 max-md:flex-col gap-4">
+    <div>
+      <div class="font-alt font-medium text-sm mb-2">Популярные темы</div>
+      <div class="flex gap-2 flex-wrap">
+        <% for(let i = 0; i < 3; i++) { %>
+        <a href="javascript:;" class="font-alt btn btn-contur btn-black btn-[42px] rounded-full  border-black/20">
+          #важное
+        </a>
+        <% } %>
+      </div>
+    </div>
+    <div class="md:w-1/2 md:ml-auto">
+      <div class="font-alt font-medium text-sm mb-2">Поиск по темам</div>
+      <div class="relative" data-toggle-cover>
+        <div class="relative">
+          <button class="w-full rounded-xl border border-black/20 h-[42px] bg-white relative px-4" data-toggle-link>
+            <div class="text-left text-sm">Важно, Рыба</div>
+            <c-icon class="icon absolute right-4 top-1/2 -translate-y-1/2" href="img/icons.svg#to-right"></c-icon>
+          </button>
+          <div class="absolute right-12 top-1/2 -translate-y-1/2">
+            <a href="javascript:;" class="btn btn-text btn-black">
+              <c-icon class="icon  text-xs" href="img/icons.svg#cross"></c-icon>
+            </a>
+          </div>
+        </div>
+        <div class="dropdown w-full" data-toggle-content>
+          <div class="p-4">
+            <div class="text-lg font-medium opacity-40 mb-5">О мероприятии</div>
+            <div class="flex flex-col gap-3">
+              <a href="javascript:;" class="flex items-start gap-3 cursor-pointer form-field">
+                <input type="checkbox" checked class="form-input-checkbox">
+                <div class="flex-shrink-0 form-checkbox-target">
+                  <c-icon class="icon" href="img/icons.svg#gal-ochka"></c-icon>
+                </div>
+                <div class=""> Важно </div>
+              </a>
+              <a href="javascript:;" class="flex items-start gap-3 cursor-pointer form-field">
+                <input type="checkbox" class="form-input-checkbox">
+                <div class="flex-shrink-0 form-checkbox-target">
+                  <c-icon class="icon" href="img/icons.svg#gal-ochka"></c-icon>
+                </div>
+                <div class=""> Тренды </div>
+              </a>
+              <a href="javascript:;" class="flex items-start gap-3 cursor-pointer form-field">
+                <input type="checkbox" class="form-input-checkbox">
+                <div class="flex-shrink-0 form-checkbox-target">
+                  <c-icon class="icon" href="img/icons.svg#gal-ochka"></c-icon>
+                </div>
+                <div class=""> Выставка </div>
+              </a>
+            </div>
+            <div class="text-lg font-medium opacity-40 mb-5 mt-7">Выставочные секторы</div>
+            <div class="flex flex-col gap-3">
+              <a href="javascript:;" class="flex items-start gap-3 cursor-pointer form-field">
+                <input type="checkbox" checked class="form-input-checkbox">
+                <div class="flex-shrink-0 form-checkbox-target">
+                  <c-icon class="icon" href="img/icons.svg#gal-ochka"></c-icon>
+                </div>
+                <div class=""> Рыба </div>
+              </a>
+              <a href="javascript:;" class="flex items-start gap-3 cursor-pointer form-field">
+                <input type="checkbox" class="form-input-checkbox">
+                <div class="flex-shrink-0 form-checkbox-target">
+                  <c-icon class="icon" href="img/icons.svg#gal-ochka"></c-icon>
+                </div>
+                <div class=""> Рыба </div>
+              </a>
+              <a href="javascript:;" class="flex items-start gap-3 cursor-pointer form-field">
+                <input type="checkbox" class="form-input-checkbox">
+                <div class="flex-shrink-0 form-checkbox-target">
+                  <c-icon class="icon" href="img/icons.svg#gal-ochka"></c-icon>
+                </div>
+                <div class=""> Рыба </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-shadow" data-toggle-link></div>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-7">
+    <% for(let i = 0; i < 10; i++) { %>
+    <div class="news-item">
+      <div class="ratio ratio-[285/180]">
+        <img src="img/test.jpg" alt="" class="absolute-image">
+      </div>
+      <div class="p-2 sm:p-4 pt-5 flex flex-col grow">
+        <div class="text-sm font-alt opacity-60 mb-3">27.05.2024</div>
+        <div class="font-alt font-semibold text-sm xs:text-lg sm:text-1.5xl uppercase line-clamp-3 mb-auto">
+          Открытие новой
+          выставки Cold
+          Chain Russia
+        </div>
+        <div class="sm:mt-12 mt-5">
+          <button class="btn btn-gradient btn-fill rounded-full max-sm:w-full max-sm:btn-sm">Подробнее</button>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+  <div class="flex gap-4 mt-10">
+    <button class="btn btn-icon btn-black btn-contur btn-[52px] rounded-2xl border-black/20">
+      <c-icon class="icon" href="img/icons.svg#to-left"></c-icon>
+    </button>
+    <button class="btn btn-icon btn-gradient btn-fill btn-[52px] rounded-2xl">
+      1
+    </button>
+    <button class="btn btn-icon btn-black btn-contur btn-[52px] rounded-2xl border-black/20">
+      2
+    </button>
+    <button class="btn btn-icon btn-black btn-contur btn-[52px] rounded-2xl border-black/20 max-sm:hidden">
+      3
+    </button>
+    <button class="btn btn-icon btn-black btn-contur btn-[52px] rounded-2xl border-black/20 max-sm:hidden">
+      4
+    </button>
+    <button class="btn btn-icon btn-black btn-contur btn-[52px] rounded-2xl border-black/20">
+      <c-icon class="icon" href="img/icons.svg#to-right"></c-icon>
+    </button>
+  </div>
+</section>
+
+
+<%= _.template(require('./html-includes/footer.html').default)({status: true}) %>

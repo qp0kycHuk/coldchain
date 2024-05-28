@@ -1,6 +1,6 @@
 const elementsSizes = {
   xs: '24px',
-  sm: '32px',
+  sm: '42px',
   base: '60px',
   lg: '70px',
   xl: '80px',
@@ -56,8 +56,8 @@ module.exports = {
       black: '#000',
     },
     fontFamily: {
-      base: 'var(--font-base)',
-      alt: 'var(--font-alt)',
+      base: "'Inter', arial, helvetica, sans-serif",
+      alt: "'Manrope', arial, helvetica, sans-serif",
     },
     zIndex: [0, 321, 322, 323, 324, 325, 326, 327, 328, 329, 'auto'],
     extend: {
@@ -93,6 +93,9 @@ module.exports = {
         '3.5xl': ['2rem', '1.35'],
         '4.5xl': ['2.5rem', '1.35'],
       },
+      borderRadius: {
+        '4xl': '2rem'
+      }
     },
   },
   plugins: [
