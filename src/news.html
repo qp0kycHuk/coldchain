@@ -10,34 +10,34 @@
 </section>
 
 <section class="section-padding">
-  <div class="flex mb-12 max-md:flex-col gap-4">
+  <div class="flex gap-4 mb-12 max-md:flex-col">
     <div>
-      <div class="font-alt font-medium text-sm mb-2">Популярные темы</div>
-      <div class="flex gap-2 flex-wrap">
+      <div class="mb-2 text-sm font-medium font-alt">Популярные темы</div>
+      <div class="flex flex-wrap gap-2">
         <% for(let i = 0; i < 3; i++) { %>
-        <a href="javascript:;" class="font-alt btn btn-contur btn-black btn-[42px] rounded-full  border-black/20">
+        <a href="javascript:;" class="font-alt btn btn-[42px] rounded-full <%= i === 0 ? 'btn-fill btn-gradient' : 'btn-contur btn-black border-black/20' %>">
           #важное
         </a>
         <% } %>
       </div>
     </div>
     <div class="md:w-1/2 md:ml-auto">
-      <div class="font-alt font-medium text-sm mb-2">Поиск по темам</div>
+      <div class="mb-2 text-sm font-medium font-alt">Поиск по темам</div>
       <div class="relative" data-toggle-cover>
         <div class="relative">
           <button class="w-full rounded-xl border border-black/20 h-[42px] bg-white relative px-4" data-toggle-link>
-            <div class="text-left text-sm">Важно, Рыба</div>
-            <c-icon class="icon absolute right-4 top-1/2 -translate-y-1/2" href="img/icons.svg#to-right"></c-icon>
+            <div class="text-sm text-left">Важно, Рыба</div>
+            <c-icon class="absolute -translate-y-1/2 icon right-4 top-1/2" href="img/icons.svg#to-right"></c-icon>
           </button>
-          <div class="absolute right-12 top-1/2 -translate-y-1/2">
+          <div class="absolute -translate-y-1/2 right-12 top-1/2">
             <a href="javascript:;" class="btn btn-text btn-black">
-              <c-icon class="icon  text-xs" href="img/icons.svg#cross"></c-icon>
+              <c-icon class="text-xs icon" href="img/icons.svg#cross"></c-icon>
             </a>
           </div>
         </div>
-        <div class="dropdown w-full" data-toggle-content>
+        <div class="w-full dropdown" data-toggle-content>
           <div class="p-4">
-            <div class="text-lg font-medium opacity-40 mb-5">О мероприятии</div>
+            <div class="mb-5 text-lg font-medium opacity-40">О мероприятии</div>
             <div class="flex flex-col gap-3">
               <a href="javascript:;" class="flex items-start gap-3 cursor-pointer form-field">
                 <input type="checkbox" checked class="form-input-checkbox">
@@ -61,7 +61,7 @@
                 <div class=""> Выставка </div>
               </a>
             </div>
-            <div class="text-lg font-medium opacity-40 mb-5 mt-7">Выставочные секторы</div>
+            <div class="mb-5 text-lg font-medium opacity-40 mt-7">Выставочные секторы</div>
             <div class="flex flex-col gap-3">
               <a href="javascript:;" class="flex items-start gap-3 cursor-pointer form-field">
                 <input type="checkbox" checked class="form-input-checkbox">
@@ -91,10 +91,18 @@
       </div>
     </div>
   </div>
-  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-7">
-    <% for(let i = 0; i < 10; i++) { %>
-    <%= _.template(require('./html-includes/news-item.html').default)() %>
-    <% } %>
+  <div class="flex flex-col gap-5">
+    <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 sm:gap-7">
+      <% for(let i = 0; i < 10; i++) { %>
+      <%= _.template(require('./html-includes/news-item.html').default)() %>
+      <% } %>
+    </div>
+    <div class="flex flex-col items-center gap-6 px-4 py-6 xs:px-6 xs:py-8 sm:flex-row md:gap-12 md:px-10 news-plug">
+      <img class="block w-full max-w-36" src="img/snowflake-plug.png" alt="">
+      <div class="text-lg font-bold text-center uppercase sm:text-2xl font-alt sm:text-left">
+        По данным хештегам ничего не найдено. <br class="hidden sm:block"> Попробуйте выбрать другие хештеги
+      </div>
+    </div>
   </div>
   <div class="flex gap-4 mt-10">
     <button class="btn btn-icon btn-black btn-contur btn-[52px] rounded-2xl border-black/20">
